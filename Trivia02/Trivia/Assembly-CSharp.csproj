@@ -103,6 +103,7 @@
     <Compile Include="Assets\MaterialUI\Scripts\Toaster.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\ToggleConfig.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\ToggleTextChanger.cs" />
+    <Compile Include="Assets\OverScreenManager.cs" />
     <Compile Include="Assets\Question.cs" />
     <None Include="Assets\MaterialUI\Fonts\NOTICE.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

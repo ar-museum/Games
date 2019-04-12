@@ -32,6 +32,15 @@ public class GameManager : MonoBehaviour
             questions = quests.questions;
             Score.text = "Score: ";
             score = 0;
+            //SceneManager.UnloadSceneAsync("GameOverScene");
+        }
+      
+        else if(questions.Count==0)
+        {
+            Debug.Log(questions.Count);
+            questions = null;
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("GameOverScene");
         }
         SetCurrentQuestion();
         setCurrentButtons();
