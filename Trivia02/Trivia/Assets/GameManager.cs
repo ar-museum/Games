@@ -4,6 +4,7 @@ using manageQuestions;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,8 +28,10 @@ public class GameManager : MonoBehaviour
         if (questions == null)
         {
             QuestionArray quests;
+           
             JsonToObject deserializer = new JsonToObject();
             quests = deserializer.loadJson();
+            //Debug.Log(quests.questions.Count);
             questions = quests.questions;
             Score.text = "Score: ";
             score = 0;
@@ -37,7 +40,7 @@ public class GameManager : MonoBehaviour
       
         else if(questions.Count==0)
         {
-            Debug.Log(questions.Count);
+            //Debug.Log(questions.Count);
             questions = null;
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene("GameOverScene");
@@ -49,16 +52,19 @@ public class GameManager : MonoBehaviour
     }
     public void SetCurrentQuestion()
     {
+      // Debug.Log(questions.Count);
         int randomIndexQuestion = Random.Range(0, questions.Count);
+
         currentQuestion = questions[randomIndexQuestion];
         toBeDisplayed.text = currentQuestion.question;
         
     }
     public void setCurrentButtons()
     {
-        b1.GetComponentInChildren<Text>().text = currentQuestion.getAllAnswers()[0];
-        b2.GetComponentInChildren<Text>().text = currentQuestion.getAllAnswers()[1];
-        b3.GetComponentInChildren<Text>().text = currentQuestion.getAllAnswers()[2];
+        //Debug.Log(b1.GetComponentInChildren<TextMeshPro>().text);
+        b1.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.getAllAnswers()[0];
+        b2.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.getAllAnswers()[1];
+        b3.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.getAllAnswers()[2];
     }
 
     IEnumerator NextQuestion()
@@ -71,14 +77,14 @@ public class GameManager : MonoBehaviour
     public void userSelect(Button b)
     {
         //Debug.Log(currentQuestion.getRightAnswer());
-        if (b.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
+        if (b.GetComponentInChildren<TextMeshProUGUI>().text == currentQuestion.getRightAnswer())
         {
-            b.GetComponentInChildren<Text>().text = "Correct!";
+            b.GetComponentInChildren<TextMeshProUGUI>().text = "Correct!";
             score ++;
             Score.text = "Score:" + score.ToString();
             
         }
-        else b.GetComponentInChildren<Text>().text = "Wrong!";
+        else b.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!";
 
         StartCoroutine(NextQuestion());
     }
