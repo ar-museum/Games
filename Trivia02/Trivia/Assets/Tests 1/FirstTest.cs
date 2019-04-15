@@ -4,26 +4,26 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
-//using manageQuestions;
+using manageQuestions;
 
 namespace Tests
 {
     public class FirstTest
     {
         // A Test behaves as an ordinary method
-        Button b;
+        //Button b;
         [Test]
         public void FirstTestSimplePasses()
         {
             // Use the Assert class to test conditions
-            //Question q=new Question();
-            //q.setDificulty("easy");
+            Question q=new Question();
+            q.setDificulty("easy");
 
-            //Assert.AreEqual("easy", q.difficult);
+            Assert.AreEqual("easy", q.difficult);
             //GameObject b = new GameObject();
-            b.GetComponentInChildren<Text>().text = "ceva";
+            //b.GetComponentInChildren<Text>().text = "ceva";
 
-            Assert.AreEqual("ceva", b.GetComponentInChildren<Text>().text);
+            //Assert.AreEqual("ceva", b.GetComponentInChildren<Text>().text);
 
         }
 
