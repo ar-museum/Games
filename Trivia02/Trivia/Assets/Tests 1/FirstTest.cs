@@ -4,6 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
+//using manageQuestions;
 
 namespace Tests
 {
@@ -15,10 +16,10 @@ namespace Tests
         public void FirstTestSimplePasses()
         {
             // Use the Assert class to test conditions
-            /*Question q=new Question();
-            q.setDificulty("easy");
+            //Question q=new Question();
+            //q.setDificulty("easy");
 
-            Assert.AreEqual("easy", q.difficult);*/
+            //Assert.AreEqual("easy", q.difficult);
             //GameObject b = new GameObject();
             b.GetComponentInChildren<Text>().text = "ceva";
 
