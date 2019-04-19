@@ -62,9 +62,9 @@ public class GameManager : MonoBehaviour
     public void setCurrentButtons()
     {
         //Debug.Log(b1.GetComponentInChildren<TextMeshPro>().text);
-        b1.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.getAllAnswers()[0];
-        b2.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.getAllAnswers()[1];
-        b3.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.getAllAnswers()[2];
+        b1.GetComponentInChildren<Text>().text = currentQuestion.getAllAnswers()[0];
+        b2.GetComponentInChildren<Text>().text = currentQuestion.getAllAnswers()[1];
+        b3.GetComponentInChildren<Text>().text = currentQuestion.getAllAnswers()[2];
     }
 
     IEnumerator nextQuestion()
@@ -77,14 +77,14 @@ public class GameManager : MonoBehaviour
     public void userSelect(Button b)
     {
         //Debug.Log(currentQuestion.getRightAnswer());
-        if (b.GetComponentInChildren<TextMeshProUGUI>().text == currentQuestion.getRightAnswer())
+        if (b.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
         {
-            b.GetComponentInChildren<TextMeshProUGUI>().text = "Correct!";
+            b.GetComponentInChildren<Text>().text = "Correct!";
             score ++;
             Score.text = "Score:" + score.ToString();
             
         }
-        else b.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!";
+        else b.GetComponentInChildren<Text>().text = "Wrong!";
 
         StartCoroutine(nextQuestion());
     }
