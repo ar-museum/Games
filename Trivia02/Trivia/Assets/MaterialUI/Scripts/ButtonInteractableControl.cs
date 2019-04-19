@@ -36,7 +36,7 @@ namespace MaterialUI
 			{
 				lastInteractableState = button.interactable;
 
-				if (lastInteractableState)
+                if (lastInteractableState)
 				{
 					canvasGroup.alpha = 1f;
 					canvasGroup.blocksRaycasts = true;
