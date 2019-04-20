@@ -13,11 +13,15 @@ namespace manageQuestions
         {
 
         }
-
+        public string difficult;
         public string question;
         public string[] allAnswers;
         public string rightAnswer;
 
+        public string getDificulty()
+        {
+            return difficult;
+        }
         public string getQuestion()
         {
             return question;
@@ -47,6 +51,10 @@ namespace manageQuestions
         {
             rightAnswer = a;
         }
+        public void setDificulty(string a)
+        {
+            difficult = a;
+        }
     }
 
     [Serializable]
@@ -60,13 +68,24 @@ namespace manageQuestions
     {
         public QuestionArray loadJson()
         {
-            using (StreamReader r = new StreamReader("./Assets/intrebari.json"))
+            using (StreamReader r = new StreamReader("./Assets/romana.json"))
             {
                 string json = r.ReadToEnd();
                 //Debug.Log(json);
                 //List<Question> deserialized = JsonUtility.FromJson<List<Question>>(json);
                 QuestionArray deserialized = JsonUtility.FromJson<QuestionArray>(json);
+                
                 //Debug.Log(deserialized.questions[0].getQuestion());
+                for (int i = 0; i < deserialized.questions.Count; i++)
+                {
+                    if (deserialized.questions[i].getDificulty() != "easy")
+                    { deserialized.questions.RemoveAt(i); i--; }
+                    else
+                    {
+                        //Debug.Log(deserialized.questions[i].question);
+                    }
+                }
+                //Debug.Log(deserialized.questions.Count);
                 return deserialized;
             }
         }
