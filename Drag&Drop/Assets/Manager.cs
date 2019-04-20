@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Manager : MonoBehaviour
 {
@@ -10,17 +10,63 @@ public class Manager : MonoBehaviour
         firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto,
         verifyButton;
 
-    public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos;
+    public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos, temp;
+
+    Vector2[] namePositionArray = new[] { new Vector2(Screen.width/2 + Screen.width/4.5f, Screen.height/2 - Screen.height/2.5f),
+        new Vector2(Screen.width / 2 , Screen.height / 2 - Screen.height/4),
+        new Vector2(Screen.width / 2 - Screen.width / 3, Screen.height / 2 - Screen.height/7),
+        new Vector2(Screen.width / 2 + Screen.width / 3, Screen.height / 2 - Screen.height/4.5f),
+        new Vector2(Screen.width / 2 - Screen.width/2.5f , Screen.height / 2 - Screen.height/3) };
+
+    Vector2[] photoPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2 + Screen.height / 4.5f),
+        new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
+        new Vector2(Screen.width/2, Screen.height / 2 + Screen.height / 4.5f),
+        new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
+        new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2 + Screen.height / 4.5f) };
+
+    Vector2[] inputPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2),
+        new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2),
+        new Vector2(Screen.width/2, Screen.height / 2),
+        new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2),
+        new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2) };
 
     public Text scoreText;
 
     void Start()
     {
-        firstInitialPos = firstName.transform.position;
-        secondInitialPos = secondName.transform.position;
-        thirdInitialPos = thirdName.transform.position;
-        fourthInitialPos = fourthName.transform.position;
-        fifthInitialPos = fifthName.transform.position;
+        for(int i=0;i<5;i++)
+        {
+            int rnd = Random.Range(0,5);
+            temp = namePositionArray[rnd];
+            namePositionArray[rnd] = namePositionArray[i];
+            namePositionArray[i] = temp;
+        }  
+        firstName.transform.position = firstInitialPos = namePositionArray[0];
+        secondName.transform.position = secondInitialPos = namePositionArray[1];
+        thirdName.transform.position = thirdInitialPos = namePositionArray[2];
+        fourthName.transform.position = fourthInitialPos = namePositionArray[3];
+        fifthName.transform.position = fifthInitialPos = namePositionArray[4];
+        for (int i = 0; i < 5; i++)
+        {
+            int rnd = Random.Range(0, 5);
+            temp = photoPositionArray[rnd];
+            photoPositionArray[rnd] = photoPositionArray[i];
+            photoPositionArray[i] = temp;
+
+            temp = inputPositionArray[rnd];
+            inputPositionArray[rnd] = inputPositionArray[i];
+            inputPositionArray[i] = temp;
+        }
+        firstPhoto.transform.position = photoPositionArray[0];
+        secondPhoto.transform.position = photoPositionArray[1];
+        thirdPhoto.transform.position = photoPositionArray[2];
+        fourthPhoto.transform.position = photoPositionArray[3];
+        fifthPhoto.transform.position = photoPositionArray[4];
+        firstInput.transform.position = inputPositionArray[0];
+        secondInput.transform.position = inputPositionArray[1];
+        thirdInput.transform.position = inputPositionArray[2];
+        fourthInput.transform.position = inputPositionArray[3];
+        fifthInput.transform.position = inputPositionArray[4];
     }
 
     public void DragFirst()
@@ -208,6 +254,12 @@ public class Manager : MonoBehaviour
         }
     }
 
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void CalculateScore()
     {
         int score = 0;
@@ -222,5 +274,6 @@ public class Manager : MonoBehaviour
         if (fifthInput.transform.position == fifthName.transform.position)
             score++;
         scoreText.text = score.ToString();
+        StartCoroutine(Timer());
     }
 }
