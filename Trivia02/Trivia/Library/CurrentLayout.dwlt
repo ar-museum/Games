@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 398}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 887, y: 348}
-  m_MaxSize: {x: 16012, y: 8048}
+  m_MinSize: {x: 885, y: 348}
+  m_MaxSize: {x: 16010, y: 8048}
   vertical: 0
-  controlID: 112
+  controlID: 82
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 348}
   m_MaxSize: {x: 12010, y: 8048}
   vertical: 1
-  controlID: 50
+  controlID: 13
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 224}
   m_MaxSize: {x: 12010, y: 4024}
   vertical: 0
-  controlID: 31
+  controlID: 14
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,8 +237,8 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 443
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -291,8 +291,8 @@ MonoBehaviour:
     y: 0
     width: 506
     height: 731
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -409,7 +409,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 80e8ffff96e8fffff8e8ffff00e9ffff16e9ffff78e9ffff7ce9ffff92e9fffff4e9fffff8e9ffff0eeaffff70eaffffaaeaffffc0eaffff20ebffff24ebffff3aebffff9cebffffd6ebffffecebffff52ecffff8cecffffa2ecffff08edffff42edffff58edffffbaedffffc6edffffdcedffff3eeeffff92eeffffa8eeffff10efffff4aefffff60efffffc8efffff02f0ffff18f0ffff80f0ffffbaf0ffffd0f0ffff38f1ffff5af2ffff7cf2ffffe4f2ffff66f3ffff7cf3ffffdef3ffff16f4ffff2cf4ffff8ef4ffffc6f4ffffdcf4ffff3ef5ffff76f5ffff8cf5fffff2f5ffff48f6ffff5ef6ffffb4f6ffffecf6ffff02f7ffff5af7ffffaef7ffff6cf8ffff82f8ffffd8f8ffffdef8fffff4f8ffff4af9ffff66f9ffff7cf9ffffd4f9ffffdaf9fffff2f9ffff50faffffd6fbffff
+      m_ExpandedIDs: e6d3fffffcd3ffff82d4ffff86d4ffff9cd4ffff22d5ffff26d5ffff3cd5ffffc6d5ffffced5ffffe4d5ffff6ad6ffff72d6ffff88d6ffff0ed7ffff12d7ffff28d7ffffb2d7ffffead7ffff00d8ffff60d8ffff64d8ffff7ad8ffffdad8ffffded8fffff4d8ffff54d9ffff58d9ffff6ed9ffffced9ffff06daffff1cdaffff7cdaffff80daffff96dafffff6dafffffadaffff10dbffff70dbffff74dbffff8adbffffeadbffffeedbffff04dcffff64dcffff9cdcffffb2dcffff12ddffff16ddffff2cddffff82ddffffbaddffffd0ddffff56deffff5edeffff74defffffadefffffedeffff14dfffff74dfffff78dfffff8edfffffeedffffff2dfffff08e0ffff68e0ffff6ce0ffff82e0ffffe2e0ffff1ae1ffff30e1ffff90e1ffffc8e1ffffdee1ffff3ee2ffff76e2ffff8ce2ffffece2fffff0e2ffff06e3ffff66e3ffff6ae3ffff80e3ffffe0e3ffffe4e3fffffae3ffff5ae4ffff5ee4ffff74e4ffffd4e4ffffd8e4ffffeee4ffff74e5ffffb0e5ffffc6e5ffff4ce6ffff84e6ffff9ae6fffffae6fffffee6ffff14e7ffff9ee7ffffd6e7ffffece7ffff72e8ffffc2e8ffffcce8ffffe2e8ffff50e9ffff8ee9ffffa4e9ffff16eaffff1eeaffff34eaffffa2eaffffdeeafffff4eaffff62ebffff9cebffffb2ebffff20ecffff5aecffff70ecffffdeecffff1cedffff32edffffa4edffffa8edffffbeedffff30eeffff6aeeffff80eeffffeeeeffff2cefffff42efffffb0efffff20f0ffff36f0ffffa4f0ffffdef0fffff4f0ffff66f1ffffa0f1ffffb6f1ffff28f2ffff62f2ffff78f2ffffeaf2ffff5af3ffff70f3ffffdef3ffff18f4ffff2ef4ffff9cf4ffffd6f4ffffecf4ffff5af5ffff98f5ffffaef5ffff1cf6ffff20f6ffff36f6ffffa4f6ffffacf6ffffc2f6ffff30f7ffff6af7ffff80f7ffffeef7fffff2f7ffff08f8ffff76f8ffffb6f8ffffccf8ffff3ef9ffff46f9ffff5cf9ffffcaf9ffffa2faffffbafaffff32fbffffd6fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -577,20 +577,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Tests
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Tests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\an 2\sem 2\ip\games\Games\Trivia02\Trivia
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 41}
-    m_SelectedIDs: f2260000
-    m_LastClickedID: 9970
-    m_ExpandedIDs: 00000000f22600006a270000fe2900009a2a0000222e0000242e000000ca9a3b
+    m_SelectedIDs: f6280000
+    m_LastClickedID: 10486
+    m_ExpandedIDs: 00000000f62600006e270000082a0000a42a00002c2e00002e2e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,7 +618,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f22600006a270000fe2900009a2a0000222e0000242e0000
+    m_ExpandedIDs: 00000000f62600006e270000082a0000a42a00002c2e00002e2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
