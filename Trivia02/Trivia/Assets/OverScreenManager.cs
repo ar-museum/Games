@@ -5,6 +5,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Trivia;
 
 public class OverScreenManager : MonoBehaviour
 {
