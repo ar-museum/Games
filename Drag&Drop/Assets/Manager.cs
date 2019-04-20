@@ -12,19 +12,19 @@ public class Manager : MonoBehaviour
 
     public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos, temp;
 
-    Vector2[] namePositionArray = new[] { new Vector2(Screen.width/2 + Screen.width/4.5f, Screen.height/2 - Screen.height/2.5f),
+    static Vector2[] namePositionArray = new[] { new Vector2(Screen.width/2 + Screen.width/4.5f, Screen.height/2 - Screen.height/2.5f),
         new Vector2(Screen.width / 2 , Screen.height / 2 - Screen.height/4),
         new Vector2(Screen.width / 2 - Screen.width / 3, Screen.height / 2 - Screen.height/7),
         new Vector2(Screen.width / 2 + Screen.width / 3, Screen.height / 2 - Screen.height/4.5f),
         new Vector2(Screen.width / 2 - Screen.width/2.5f , Screen.height / 2 - Screen.height/3) };
 
-    Vector2[] photoPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2 + Screen.height / 4.5f),
+    static Vector2[] photoPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2 + Screen.height / 4.5f),
         new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
         new Vector2(Screen.width/2, Screen.height / 2 + Screen.height / 4.5f),
         new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
         new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2 + Screen.height / 4.5f) };
 
-    Vector2[] inputPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2),
+    static Vector2[] inputPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2),
         new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2),
         new Vector2(Screen.width/2, Screen.height / 2),
         new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2),
@@ -56,6 +56,7 @@ public class Manager : MonoBehaviour
             temp = inputPositionArray[rnd];
             inputPositionArray[rnd] = inputPositionArray[i];
             inputPositionArray[i] = temp;
+
         }
         firstPhoto.transform.position = photoPositionArray[0];
         secondPhoto.transform.position = photoPositionArray[1];
