@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class Manager : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class Manager : MonoBehaviour
         new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2),
         new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2) };
 
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
 
     void Start()
     {
@@ -125,6 +126,14 @@ public class Manager : MonoBehaviour
                 }
             }
         }
+        if (firstName.transform.position == secondName.transform.position)
+            secondName.transform.position = secondInitialPos;
+        else if (firstName.transform.position == thirdName.transform.position)
+            thirdName.transform.position = thirdInitialPos;
+        else if (firstName.transform.position == fourthName.transform.position)
+            fourthName.transform.position = fourthInitialPos;
+        else if (firstName.transform.position == fifthName.transform.position)
+            fifthName.transform.position = fifthInitialPos;
     }
 
     public void DropSecond()
@@ -157,6 +166,14 @@ public class Manager : MonoBehaviour
                 }
             }
         }
+        if (secondName.transform.position == firstName.transform.position)
+            firstName.transform.position = firstInitialPos;
+        else if (secondName.transform.position == thirdName.transform.position)
+            thirdName.transform.position = thirdInitialPos;
+        else if (secondName.transform.position == fourthName.transform.position)
+            fourthName.transform.position = fourthInitialPos;
+        else if (secondName.transform.position == fifthName.transform.position)
+            fifthName.transform.position = fifthInitialPos;
     }
 
     public void DropThird()
@@ -189,6 +206,14 @@ public class Manager : MonoBehaviour
                 }
             }
         }
+        if (thirdName.transform.position == secondName.transform.position)
+            secondName.transform.position = secondInitialPos;
+        else if (thirdName.transform.position == firstName.transform.position)
+            firstName.transform.position = firstInitialPos;
+        else if (thirdName.transform.position == fourthName.transform.position)
+            fourthName.transform.position = fourthInitialPos;
+        else if (thirdName.transform.position == fifthName.transform.position)
+            fifthName.transform.position = fifthInitialPos;
     }
 
     public void DropFourth()
@@ -221,6 +246,14 @@ public class Manager : MonoBehaviour
                 }
             }
         }
+        if (fourthName.transform.position == secondName.transform.position)
+            secondName.transform.position = secondInitialPos;
+        else if (fourthName.transform.position == thirdName.transform.position)
+            thirdName.transform.position = thirdInitialPos;
+        else if (fourthName.transform.position == firstName.transform.position)
+            firstName.transform.position = firstInitialPos;
+        else if (fourthName.transform.position == fifthName.transform.position)
+            fifthName.transform.position = fifthInitialPos;
     }
 
     public void DropFifth()
@@ -253,11 +286,25 @@ public class Manager : MonoBehaviour
                 }
             }
         }
+        if (fifthName.transform.position == secondName.transform.position)
+            secondName.transform.position = secondInitialPos;
+        else if (fifthName.transform.position == thirdName.transform.position)
+            thirdName.transform.position = thirdInitialPos;
+        else if (fifthName.transform.position == fourthName.transform.position)
+            fourthName.transform.position = fourthInitialPos;
+        else if (fifthName.transform.position == firstName.transform.position)
+            firstName.transform.position = firstInitialPos;
     }
 
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(3);
+        scoreText.text = "Restarting game in 3...";
+        yield return new WaitForSeconds(1);
+        scoreText.text = "Restarting game in 2...";
+        yield return new WaitForSeconds(1);
+        scoreText.text = "Restarting game in 1...";
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -274,7 +321,7 @@ public class Manager : MonoBehaviour
             score++;
         if (fifthInput.transform.position == fifthName.transform.position)
             score++;
-        scoreText.text = score.ToString();
+        scoreText.text = "Your score: " + score.ToString();
         StartCoroutine(Timer());
     }
 }
