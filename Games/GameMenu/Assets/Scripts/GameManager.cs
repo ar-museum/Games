@@ -141,12 +141,14 @@ namespace Trivia
                 timer.color = Color.red;
                 b.GetComponentInChildren<Text>().color = Color.red;
                 getRightOption().GetComponentInChildren<Text>().color = Color.green;
+                Debug.Log(getRightOption().GetComponentInChildren<Text>().text);
             }
 
             StartCoroutine(nextQuestion());
         }
         private Button getRightOption()
         {
+            Debug.Log(currentQuestion.getRightAnswer());
             if (b1.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
             {
                 return b1;
@@ -155,7 +157,11 @@ namespace Trivia
             {
                 return b2;
             }
-            return b3;
+            else if (b3.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
+            {
+                return b3;
+            }
+            return null;
         }
         private void Update()
         {

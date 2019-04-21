@@ -71,9 +71,9 @@ namespace manageQuestions
             string language = MenuManager.getLanguage();
             if (language == "Romanian")
             {
-                using (StreamReader r = new StreamReader("./Assets/Questions/romana.json"))
-                {
-                    string json = r.ReadToEnd();
+                TextAsset r = (TextAsset)Resources.Load("romana", typeof(TextAsset));
+               
+                string json = r.text;
                     //Debug.Log(json);
                     //List<Question> deserialized = JsonUtility.FromJson<List<Question>>(json);
                     QuestionArray deserialized = JsonUtility.FromJson<QuestionArray>(json);
@@ -90,13 +90,14 @@ namespace manageQuestions
                     }
                     //Debug.Log(deserialized.questions.Count);
                     return deserialized;
-                }
+                
             }
             else if (language == "English")
             {
-                using (StreamReader r = new StreamReader("./Assets/Questions/engleza.json"))
-                {
-                    string json = r.ReadToEnd();
+                TextAsset r = (TextAsset)Resources.Load("engleza", typeof(TextAsset));
+
+                string json = r.text;
+               
                     //Debug.Log(json);
                     //List<Question> deserialized = JsonUtility.FromJson<List<Question>>(json);
                     QuestionArray deserialized = JsonUtility.FromJson<QuestionArray>(json);
@@ -113,16 +114,16 @@ namespace manageQuestions
                     }
                     //Debug.Log(deserialized.questions.Count);
                     return deserialized;
-                }
+                
             }
             else
             {
-                using (StreamReader r = new StreamReader("./Assets/Questions/franceza.json"))
-                {
-                    string json = r.ReadToEnd();
-                    //Debug.Log(json);
-                    //List<Question> deserialized = JsonUtility.FromJson<List<Question>>(json);
-                    QuestionArray deserialized = JsonUtility.FromJson<QuestionArray>(json);
+                TextAsset r = (TextAsset)Resources.Load("engleza", typeof(TextAsset));
+
+                string json = r.text;
+                //Debug.Log(json);
+                //List<Question> deserialized = JsonUtility.FromJson<List<Question>>(json);
+                QuestionArray deserialized = JsonUtility.FromJson<QuestionArray>(json);
 
                     //Debug.Log(deserialized.questions[0].getQuestion());
                     for (int i = 0; i < deserialized.questions.Count; i++)
@@ -136,7 +137,7 @@ namespace manageQuestions
                     }
                     //Debug.Log(deserialized.questions.Count);
                     return deserialized;
-                }
+                
             }
         }
     }

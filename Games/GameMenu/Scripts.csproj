@@ -61,15 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Manager.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\CheckboxConfigEditor.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\EZAnimEditor.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\MaterialUIEditorTools.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\RectTransformSnapEditor.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\RippleConfigEditor.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\ScreenConfigEditor.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\ShadowGenEditor.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\SnapButtonToTextEditor.cs" />
-    <Compile Include="Assets\MaterialUI\Editor\TexturePostProcessor.cs" />
     <Compile Include="Assets\MaterialUI\Examples\Scripts\04 - RadioButton\Example04.cs" />
     <Compile Include="Assets\MaterialUI\Examples\Scripts\05 - Sliders\Example05.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\Anim.cs" />
