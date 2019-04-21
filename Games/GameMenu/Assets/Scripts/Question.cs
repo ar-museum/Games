@@ -118,7 +118,7 @@ namespace manageQuestions
             }
             else
             {
-                TextAsset r = (TextAsset)Resources.Load("engleza", typeof(TextAsset));
+                TextAsset r = (TextAsset)Resources.Load("franceza", typeof(TextAsset));
 
                 string json = r.text;
                 //Debug.Log(json);
