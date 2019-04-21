@@ -64,12 +64,12 @@ public class OverScreenManager : MonoBehaviour
                 highScore = scoreFromScene;
 
                 string output = "High score: " + scoreFromScene + " " + "Your score: " + scoreFromScene;
-                Debug.Log(output);
+                //Debug.Log(output);
             }
             else
             {
                 string output = "High score: " + highScore + " " + "Your score: " + scoreFromScene;
-                Debug.Log(output);
+               // Debug.Log(output);
             }
         }
         else//if the file doesn't exist make one and initialize the high score with the first score
@@ -83,7 +83,7 @@ public class OverScreenManager : MonoBehaviour
             highScore = scoreFromScene;
 
             string output = "High score: " + scoreFromScene + " " + "Your score: " + scoreFromScene;
-            Debug.Log(output);
+            //Debug.Log(output);
         }
         return highScore;
     }

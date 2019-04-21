@@ -1595,7 +1595,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1473397981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1473397981
@@ -1666,6 +1677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 1829856253}
   tryAgain: {fileID: 241107263}
+  quit: {fileID: 1473397980}
 --- !u!4 &1574647695
 Transform:
   m_ObjectHideFlags: 0
