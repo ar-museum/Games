@@ -22,7 +22,7 @@ namespace Tests
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
-        public IEnumerator TimerColorRedWithEnumeratorPasses()
+        public IEnumerator TimerColorRedWithEnumeratorPasses()//la fel ca mai jos
         {
             SceneManager.LoadScene("MainLevel");
             yield return new WaitForSeconds(1);
@@ -33,7 +33,7 @@ namespace Tests
             yield return null;
         }
         [UnityTest]
-        public IEnumerator TimerColorGreenWithEnumeratorPasses()
+        public IEnumerator TimerColorGreenWithEnumeratorPasses()//verific daca timpul isi modifica culoarea in functie de valoarea sa
         {
             SceneManager.LoadScene("MainLevel");
             yield return new WaitForSeconds(1);
@@ -45,7 +45,7 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator RightScoreIncrementWithEnumeratorPasses()
+        public IEnumerator RightScoreIncrementWithEnumeratorPasses()//verific daca scorul se incarca cum trebuie
         {
             SceneManager.LoadScene("MainLevel");
             yield return new WaitForSeconds(0.5f);
@@ -87,6 +87,22 @@ namespace Tests
             }
             Assert.AreEqual(myScore + GameManager.difficulty+1, GameManager.score);
             //yield return null;
+        }
+    }
+    public class nextQuestion
+    {
+        [UnityTest]
+        public IEnumerator nextQuestionComestWithEnumeratorPasses()//verific daca dupa ce expira timpul se incarca urmatoarea intrebare
+        {
+            SceneManager.LoadScene("MainLevel");
+            yield return new WaitForSeconds(0.5f);
+            Text currentQuestion = GameObject.Find("Question").GetComponent<Text>();
+            string stringCurrentQuestion = currentQuestion.text;
+            yield return new WaitForSeconds(6.64f);
+            Text newQuestion = GameObject.Find("Question").GetComponent<Text>();
+            string stringNewQuestion =newQuestion.text;
+           
+            Assert.AreNotEqual(stringCurrentQuestion, stringNewQuestion);
         }
     }
 }
