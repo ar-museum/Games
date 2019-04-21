@@ -26,14 +26,14 @@ namespace Tests
         {
             SceneManager.LoadScene("MainLevel");
             yield return new WaitForSeconds(1);
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(GameManager.getMainTimer()-3);
           Text timer = GameObject.Find("Timer").GetComponent<Text>();
             Debug.Log(timer.text);
             Assert.AreEqual(timer.color, Color.red);
             yield return null;
         }
         [UnityTest]
-        public IEnumerator TimerColorGreenWithEnumeratorPasses()//verific daca timpul isi modifica culoarea in functie de valoarea sa
+        public IEnumerator TimerColorWithEnumeratorPasses()//verific daca timpul isi modifica culoarea in functie de valoarea sa
         {
             SceneManager.LoadScene("MainLevel");
             yield return new WaitForSeconds(1);
@@ -85,7 +85,7 @@ namespace Tests
                     }
                 }
             }
-            Assert.AreEqual(myScore + GameManager.difficulty+1, GameManager.score);
+            Assert.AreEqual(myScore + GameManager.scoreDifficulty+1, GameManager.score);
             //yield return null;
         }
     }
@@ -98,7 +98,8 @@ namespace Tests
             yield return new WaitForSeconds(0.5f);
             Text currentQuestion = GameObject.Find("Question").GetComponent<Text>();
             string stringCurrentQuestion = currentQuestion.text;
-            yield return new WaitForSeconds(6.64f);
+            Debug.Log(GameManager.getMainTimer()+1);
+            yield return new WaitForSeconds(GameManager.getMainTimer()+1);
             Text newQuestion = GameObject.Find("Question").GetComponent<Text>();
             string stringNewQuestion =newQuestion.text;
            

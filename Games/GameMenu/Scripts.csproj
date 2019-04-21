@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Manager.cs" />
     <Compile Include="Assets\MaterialUI\Editor\CheckboxConfigEditor.cs" />
     <Compile Include="Assets\MaterialUI\Editor\EZAnimEditor.cs" />
     <Compile Include="Assets\MaterialUI\Editor\MaterialUIEditorTools.cs" />

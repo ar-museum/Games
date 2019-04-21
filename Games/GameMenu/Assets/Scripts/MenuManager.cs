@@ -11,7 +11,10 @@ public class MenuManager : MonoBehaviour
     private static string language = "English";//      -      //         -
     public TMP_Dropdown difficultyDropdownMenu;
     public TMP_Dropdown languageDropdownMenu;
-
+    public void loadDragDrop()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
     public void MuteSound()
     {
         AudioListener.pause = !AudioListener.pause;

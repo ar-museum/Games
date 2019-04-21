@@ -23,9 +23,9 @@ namespace Trivia
         bool wasClicked = false;
         public static float score;
         [SerializeField]//to be setted from unity
-        private float mainTimer;
+        private static float mainTimer;
 
-        private float startTime;
+        private  float startTime;
         private float fixedTime;
         [SerializeField]
         private Text timer;
@@ -179,5 +179,10 @@ namespace Trivia
             }
         }
 
+        public static float getMainTimer()
+        {
+            return mainTimer;
+        }
     }
+    
 }
