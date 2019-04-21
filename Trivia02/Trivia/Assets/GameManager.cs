@@ -127,6 +127,8 @@ namespace Trivia
                 b.GetComponentInChildren<Text>().text = "Correct!";
                 if (startTime > 2.5)
                     score++;
+                timer.text = "Correct!";
+                timer.color = Color.green;
                 score += difficulty;
                 Score.text = "Score:" + score.ToString();
 
@@ -134,6 +136,8 @@ namespace Trivia
             else
             {
                 b.GetComponentInChildren<Text>().text = "Wrong!";
+                timer.text = "Wrong!";
+                timer.color = Color.red;
                 b.GetComponentInChildren<Text>().color = Color.red;
                 getRightOption().GetComponentInChildren<Text>().color = Color.green;
             }
@@ -156,6 +160,8 @@ namespace Trivia
         {
             if (startTime >= 0.0f && wasClicked == false)
             {
+                if (!(startTime > 2f))
+                    timer.color = Color.red;
                 startTime -= Time.deltaTime;
                 timer.text = startTime.ToString("F");
             }
