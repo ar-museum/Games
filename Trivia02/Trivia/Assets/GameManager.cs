@@ -16,7 +16,7 @@ namespace Trivia
     {
         //dificulty easy=1,medium1.5,hard =2
         public static List<Question> questions;
-        static int difficulty = 1;
+        public static int difficulty = 2;
         float scoreDificulty;
         //static string language;//s-ar putea sa nu avem nevoie de el
 

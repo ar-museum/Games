@@ -17,7 +17,7 @@ public class OverScreenManager : MonoBehaviour
     {
         //score.text = "Game Over!\n" + "Your score is " + GameManager.score;
         score.text = "Game Over!\nScore: " + GameManager.score.ToString()+"\n";
-        if (HighScore(GameManager.score) > GameManager.score) score.text += "New Highscore!!\n";
+        if (HighScore(GameManager.score) >= GameManager.score) score.text += "New Highscore!!\n";
 
         tryAgain.GetComponentInChildren<Text>().text = "Try Again?";
     }

@@ -131,7 +131,7 @@ namespace Tests
             var b2 = GameObject.Find("Option2");
             var b3 = GameObject.Find("Option3");
             Button b11 = GameObject.FindObjectOfType<Button>();
-            b11.onClick.Invoke();
+           // b11.onClick.Invoke();
             // var b22 = b2.GetComponent<Button>();
             // var b33 = b2.GetComponent<Button>();
             var question = GameObject.Find("Question");
@@ -140,13 +140,20 @@ namespace Tests
             /*JsonToObject desirializer = new JsonToObject();
             QuestionArray expectedQuestions = desirializer.loadJson();*/
             List<Question> expectedQuestions = GameManager.questions;
+           // Debug.Log("Va salut");
             for (int i = 0; i < expectedQuestions.Count; i++)
             {
                 if (question.GetComponentInChildren<Text>().text == expectedQuestions[i].question)
                 {
+                    Debug.Log("primu");
                     Assert.AreEqual(expectedQuestions[i].getAllAnswers()[0], b1.GetComponentInChildren<Text>().text);
-                    Assert.AreEqual(expectedQuestions[i].getAllAnswers()[1], b2.GetComponentInChildren<Text>().text);
+                    Debug.Log("primu");
+
+
+                   Assert.AreEqual(expectedQuestions[i].getAllAnswers()[1], b2.GetComponentInChildren<Text>().text);
+                    Debug.Log("dooi");
                     Assert.AreEqual(expectedQuestions[i].getAllAnswers()[2], b3.GetComponentInChildren<Text>().text);
+                    Debug.Log("trie");
                 }
 
             }

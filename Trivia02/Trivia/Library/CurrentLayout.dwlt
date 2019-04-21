@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 885, y: 498}
-  m_MaxSize: {x: 16010, y: 14048}
+  m_MinSize: {x: 887, y: 498}
+  m_MaxSize: {x: 16012, y: 14048}
   vertical: 0
-  controlID: 63
+  controlID: 52
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 498}
   m_MaxSize: {x: 12010, y: 14048}
   vertical: 1
-  controlID: 11
+  controlID: 102
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 224}
   m_MaxSize: {x: 12010, y: 4024}
   vertical: 0
-  controlID: 12
+  controlID: 103
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,8 +211,8 @@ MonoBehaviour:
     y: 0
     width: 205
     height: 444
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -237,8 +237,8 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 444
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -291,8 +291,8 @@ MonoBehaviour:
     y: 0
     width: 506
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -407,9 +407,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1af0ffff
-      m_LastClickedID: -4070
-      m_ExpandedIDs: eaefffff1af0ffff46f0ffffdcf3fffff2f3ffff7cf4ffff80f4ffff98f4ffff28f5ffff4cf5ffffa8f5ffffb0420000d842000036430000564300001c4d0000484d0000704d0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: d8dbffffeedbffff52dcffff8cdcffffa2dcffff06ddffff4cddffff60ddffff68ddffffbaddffffcedfffffd6dfffffecdfffff50e0ffff54e0ffff6ae0fffff4e0ffff2ce1ffff42e1ffffa6e1ffffdee1fffff4e1ffff58e2ffffb0e2ffffb6e2ffffcce2ffff28e3ffff78e3ffff7ee3ffff94e3fffff8e3ffff32e4ffff48e4fffface4ffffb0e4ffffc6e4ffff2ae5ffff64e5ffff7ae5ffffdee5ffff18e6ffff2ee6ffff92e6ffffcce6ffffe2e6ffff46e7ffff4ae7ffff60e7ffffc4e7fffffee7ffff14e8ffff78e8ffffb2e8ffffc8e8ffff2ce9ffff66e9ffff7ce9ffffe0e9ffff1aeaffff30eaffff94eaffffceeaffffe4eaffff48ebffffc2ebffffd8ebffff3cecffff76ecffff8cecfffff0ecffff2aedffff40edffffe4edffff5ceeffff72eeffffd6eeffff10efffff26efffff8aefffffc4efffffdaefffff3ef0ffff78f0ffff8ef0fffff2f0ffff2cf1ffff42f1ffffa6f1ffffe4f1fffffaf1ffff10f2ffff76f2ffff96f3ffffacf3ffff38f4ffff7ef4ffff94f4ffff20f5ffffacf5ffffc2f5ffff4ef6ffff9cf6ffffb2f6ffff3ef7ffff84f7ffff9af7ffff26f8ffff38f8ffff4ef8ffffb4f8fffffef8ffff14f9ffffa0f9ffffa6f9ffffbcf9ffff18faffff22faffff38faffff9efaffffa6faffffbcfaffff2afbffffd6fbffff625e00008e5f0000107b0000387b0000967b0000b67b0000e87d0000627e0000448300006c830000ca830000ea830000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -588,9 +588,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 41}
-    m_SelectedIDs: fc2f0000
-    m_LastClickedID: 12284
-    m_ExpandedIDs: 00000000fc2f0000743000000e330000aa330000963500009835000000ca9a3b
+    m_SelectedIDs: aa280000
+    m_LastClickedID: 10410
+    m_ExpandedIDs: 00000000aa28000022290000ba2b0000562c00007e2f0000802f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,7 +618,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc2f0000743000000e330000aa3300009635000098350000
+    m_ExpandedIDs: 00000000aa28000022290000ba2b0000562c00007e2f0000802f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
