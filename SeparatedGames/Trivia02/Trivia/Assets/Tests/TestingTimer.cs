@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Trivia;
 using manageQuestions;
 using UnityEngine.SceneManagement;
+using System;
 
 namespace Tests
 {
@@ -56,6 +57,9 @@ namespace Tests
 
             Text question = GameObject.Find("Question").GetComponent<Text>();
             List < Question > myQuestions= GameManager.questions;
+            Text timer = GameObject.Find("Timer").GetComponent<Text>();
+
+
             for(int i=0;i<myQuestions.Count;i++)
             {
                 if(question.text.ToString()==myQuestions[i].question)
@@ -69,23 +73,29 @@ namespace Tests
                     
                     if (b1.GetComponentInChildren<Text>().text == myQuestions[i].getRightAnswer())
                     {
+                        //yield return new WaitForSeconds(1.5f);
                         Debug.Log(b1.GetComponentInChildren<Text>().text+" "+ myQuestions[i].getRightAnswer());
                         b1.onClick.Invoke();
                     }
                     else if (b2.GetComponentInChildren<Text>().text == myQuestions[i].getRightAnswer())
                     {
+                        //yield return new WaitForSeconds(1.5f);
                         Debug.Log(b2.GetComponentInChildren<Text>().text + " " + myQuestions[i].getRightAnswer());
                         b2.onClick.Invoke();
                     }
 
                     else
                     {
+                        //yield return new WaitForSeconds(1.5f);
                         Debug.Log(b3.GetComponentInChildren<Text>().text + " " + myQuestions[i].getRightAnswer());
                         b3.onClick.Invoke();
                     }
+                    
+                    if (String.Compare(timer.text, "2.50")>0)
+                        myScore++;
                 }
             }
-            Assert.AreEqual(myScore + GameManager.difficulty+1, GameManager.score);
+            Assert.AreEqual(myScore + GameManager.difficulty, GameManager.score);
             //yield return null;
         }
     }

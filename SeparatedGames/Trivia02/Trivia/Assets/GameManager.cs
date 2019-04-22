@@ -117,32 +117,32 @@ namespace Trivia
 
         public void userSelect(Button b)
         {
-            //Debug.Log(currentQuestion.getRightAnswer());
-            fixedTime = startTime;
-            timer.text = fixedTime.ToString("F");
-            wasClicked = true;
-            if (b.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
+            if (wasClicked == false)
             {
-                b.GetComponentInChildren<Text>().color = Color.green;
-                b.GetComponentInChildren<Text>().text = "Correct!";
-                if (startTime > 2.5)
-                    score++;
-                timer.text = "Correct!";
-                timer.color = Color.green;
-                score += difficulty;
-                Score.text = "Score:" + score.ToString();
+                fixedTime = startTime;
+                timer.text = fixedTime.ToString("F");
+                wasClicked = true;
+                if (b.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
+                {
+                    b.GetComponentInChildren<Text>().color = Color.green;
+                    b.GetComponentInChildren<Text>().text = "Correct!";
+                    if (startTime > 2.5)
+                        score++;
+                    timer.color = Color.green;
+                    score += difficulty;
+                    Score.text = "Score:" + score.ToString();
 
-            }
-            else
-            {
-                b.GetComponentInChildren<Text>().text = "Wrong!";
-                timer.text = "Wrong!";
-                timer.color = Color.red;
-                b.GetComponentInChildren<Text>().color = Color.red;
-                getRightOption().GetComponentInChildren<Text>().color = Color.green;
-            }
+                }
+                else
+                {
+                    b.GetComponentInChildren<Text>().text = "Wrong!";
+                    timer.color = Color.red;
+                    b.GetComponentInChildren<Text>().color = Color.red;
+                    getRightOption().GetComponentInChildren<Text>().color = Color.green;
+                }
 
-            StartCoroutine(nextQuestion());
+                StartCoroutine(nextQuestion());
+            }
         }
         private Button getRightOption()
         {
@@ -160,8 +160,9 @@ namespace Trivia
         {
             if (startTime >= 0.0f && wasClicked == false)
             {
-                if (!(startTime > 2f))
+                if (startTime<=2.5f)
                     timer.color = Color.red;
+
                 startTime -= Time.deltaTime;
                 timer.text = startTime.ToString("F");
             }
@@ -169,12 +170,9 @@ namespace Trivia
             {
                 timer.text = "0.00";
 
-                Button b = getRightOption();
-
                 getRightOption().GetComponent<Image>().color = Color.green;
+
                 StartCoroutine(nextQuestion());
-                //nextQuestion();
-                //Start();
             }
         }
 

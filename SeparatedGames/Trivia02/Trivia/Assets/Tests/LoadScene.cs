@@ -28,7 +28,7 @@ namespace Tests
 
             Button b = GameObject.FindObjectOfType<Button>();
 
-            Debug.Log(b.GetComponentInChildren<Text>().text);
+            //Debug.Log(b.GetComponentInChildren<Text>().text);
 
             b.onClick.Invoke();
             yield return new WaitForSeconds(1);
@@ -40,7 +40,7 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator LoadSceneWithEnumeratorPasses1()
+        public IEnumerator LoadQuestionWithEnumeratorPasses()
         {
 
             SceneManager.LoadScene("GameOverScene");
@@ -48,15 +48,36 @@ namespace Tests
 
             Button b = GameObject.FindObjectOfType<Button>();
 
-            Debug.Log(b.GetComponentInChildren<Text>().text);
+            //Debug.Log(b.GetComponentInChildren<Text>().text);
 
             b.onClick.Invoke();
             yield return new WaitForSeconds(1);
 
-            Scene currentScene = SceneManager.GetActiveScene();
-            Assert.AreEqual("MainLevel", currentScene.name);
+            var question = GameObject.Find("Question");
+
+            Assert.NotNull(question.GetComponentInChildren<Text>().text);
 
             yield return null;
         }
+
+        [UnityTest]
+        public IEnumerator LoadAnswersWithEnumeratorPasses()
+        {
+
+            SceneManager.LoadScene("GameOverScene");
+            yield return new WaitForSeconds(1);
+
+            Button b = GameObject.FindObjectOfType<Button>();
+
+            b.onClick.Invoke();
+            yield return new WaitForSeconds(1);
+
+            Button[] buttons = GameObject.FindObjectsOfType<Button>();
+
+            Assert.NotNull(buttons);
+
+            yield return null;
+        }
+
     }
 }
