@@ -67,8 +67,8 @@ namespace Trivia
             }
             difficulty = MenuManager.getDifficulty();
             if (difficulty == "Easy") { mainTimer = 10.04f; scoreDifficulty = 1; }//setam dificultate +score+timp pe easy
-            else if (difficulty == "Medium") { mainTimer = 7.54f; scoreDifficulty = 1.5f; }//setam pentru mediu
-            else { mainTimer = 5.04f; scoreDifficulty = 2; }
+            else if (difficulty == "Medium") { mainTimer = 7.54f; scoreDifficulty = 2; }//setam pentru mediu
+            else { mainTimer = 5.04f; scoreDifficulty = 3; }
 
             startTime = mainTimer;
             timer.text = startTime.ToString();
@@ -118,32 +118,34 @@ namespace Trivia
 
         public void userSelect(Button b)
         {
-            //Debug.Log(currentQuestion.getRightAnswer());
-            fixedTime = startTime;
-            timer.text = fixedTime.ToString("F");
-            wasClicked = true;
-            if (b.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
+            if (wasClicked == false)
             {
-                b.GetComponentInChildren<Text>().color = Color.green;
-                b.GetComponentInChildren<Text>().text = "Correct!";
-                if ((difficulty=="Hard"&&startTime>(5.04f/2))||(difficulty == "Medium" && startTime > (7.54f / 2))||(difficulty == "Easy" && startTime > (7.54f / 2)))
-                    score++;
+                fixedTime = startTime;
+                timer.text = fixedTime.ToString("F");
+                wasClicked = true;
+                if (b.GetComponentInChildren<Text>().text == currentQuestion.getRightAnswer())
+                {
+                    b.GetComponentInChildren<Text>().color = Color.green;
+                    b.GetComponentInChildren<Text>().text = "Correct!";
+                    if ((difficulty == "Hard" && startTime > (5.04f / 2)) || (difficulty == "Medium" && startTime > (7.54f / 2)) || (difficulty == "Easy" && startTime > (7.54f / 2)))
+                        score++;
 
-                timer.color = Color.green;
-                score += scoreDifficulty;
-                Score.text = "Score:" + score.ToString();
+                    timer.color = Color.green;
+                    score += scoreDifficulty;
+                    Score.text = "Score:" + score.ToString();
 
+                }
+                else
+                {
+                    b.GetComponentInChildren<Text>().text = "Wrong!";
+                    timer.color = Color.red;
+                    b.GetComponentInChildren<Text>().color = Color.red;
+                    getRightOption().GetComponentInChildren<Text>().color = Color.green;
+                    Debug.Log(getRightOption().GetComponentInChildren<Text>().text);
+                }
+
+                StartCoroutine(nextQuestion());
             }
-            else
-            {
-                b.GetComponentInChildren<Text>().text = "Wrong!";
-                timer.color = Color.red;
-                b.GetComponentInChildren<Text>().color = Color.red;
-                getRightOption().GetComponentInChildren<Text>().color = Color.green;
-                Debug.Log(getRightOption().GetComponentInChildren<Text>().text);
-            }
-
-            StartCoroutine(nextQuestion());
         }
         private Button getRightOption()
         {

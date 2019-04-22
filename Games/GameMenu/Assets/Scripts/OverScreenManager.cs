@@ -16,11 +16,17 @@ public class OverScreenManager : MonoBehaviour
     [SerializeField]
     private Button quit;
 
+    private static float oldHighScore;
+    
     void Start()
     {
         //score.text = "Game Over!\n" + "Your score is " + GameManager.score;
         score.text = "Game Over!\nScore: " + GameManager.score.ToString() + "\n";
-        if (HighScore(GameManager.score) >= GameManager.score) score.text += "New Highscore!!\n";
+        float high = HighScore(GameManager.score);
+       // Debug.Log(high);
+       // Debug.Log(GameManager.score);
+        if (oldHighScore < GameManager.score) score.text =score.text+ "New Highscore: "+high.ToString()+"!";
+        else score.text = score.text + "Highscore: " + high.ToString() + "!";
 
         tryAgain.GetComponentInChildren<Text>().text = "Try Again?";
 
@@ -34,7 +40,9 @@ public class OverScreenManager : MonoBehaviour
     public static float HighScore(float scoreFromScene)
     {
         string fileInput, filePath;
-        filePath = @".\highscore.txt";
+        filePath = @".\Assets\highscore.txt";
+
+        
         float highScore;
         if (File.Exists(filePath))//check the file for the previous high score 
         {
@@ -44,42 +52,28 @@ public class OverScreenManager : MonoBehaviour
 
             string[] vecString = fileInput.Split(' ');
 
-            highScore = int.Parse(vecString[1]);
+            highScore = float.Parse(vecString[1]);
+            oldHighScore = highScore;
 
             if (highScore < scoreFromScene)
             {
-                StreamReader streamReader123 = new StreamReader(filePath);
-                string content = streamReader123.ReadToEnd();
-                streamReader123.Close();
-                content = Regex.Replace(content, highScore.ToString(), scoreFromScene.ToString());
-
-                StreamWriter streamWriter = new StreamWriter(filePath);
-                streamWriter.Write(content);
-                streamWriter.Close();
                 highScore = scoreFromScene;
-
-                string output = "High score: " + scoreFromScene + " " + "Your score: " + scoreFromScene;
-                Debug.Log(output);
-            }
-            else
-            {
-                string output = "High score: " + highScore + " " + "Your score: " + scoreFromScene;
-                Debug.Log(output);
+                File.WriteAllText(filePath, string.Empty);
+                string output = "Highscore: " + highScore;
+                StreamWriter streamWriter = new StreamWriter(filePath);
+                streamWriter.Write(output);
+                streamWriter.Close();
             }
         }
         else//if the file doesn't exist make one and initialize the high score with the first score
         {
             StreamWriter streamWriter = File.AppendText(filePath);
+            streamWriter.Write("Highscore " + scoreFromScene);
             streamWriter.Close();
-
-            StreamWriter streamWriter1 = new StreamWriter(filePath);
-            streamWriter1.Write("Highscore " + scoreFromScene);
-            streamWriter1.Close();
             highScore = scoreFromScene;
 
-            string output = "High score: " + scoreFromScene + " " + "Your score: " + scoreFromScene;
-            Debug.Log(output);
         }
+
         return highScore;
     }
 
