@@ -35,7 +35,7 @@ public class OverScreenManager : MonoBehaviour
     public void tryAgainPressed()
     {
         //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("MainLevel");
+        SceneManager.LoadScene("LaunchingTrivia");
     }
     public static float HighScore(float scoreFromScene)
     {

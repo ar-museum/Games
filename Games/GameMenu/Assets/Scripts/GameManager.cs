@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using manageQuestions;
 using UnityEngine;
-using UnityEngine.UI; 
-
-
+using UnityEngine.UI;
+using meniu;
 using UnityEngine.SceneManagement;
 
 using TMPro;
@@ -16,6 +15,7 @@ namespace Trivia
     {
         //dificulty easy=1,medium1.5,hard =2
         public static List<Question> questions;
+        public static string language;
         public static string difficulty;
         public static float scoreDifficulty;
         //static string language;//s-ar putea sa nu avem nevoie de el
@@ -44,6 +44,11 @@ namespace Trivia
         public void Start()
         {
             wasClicked = false;
+            language = MenuManager.getLanguage();
+            Debug.Log(language);
+            
+            difficulty = MenuManager.getDifficulty();
+            Debug.Log(difficulty);
             if (questions == null)
             {
                 QuestionArray quests;
@@ -63,9 +68,12 @@ namespace Trivia
                 //Debug.Log(questions.Count);
                 questions = null;
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+                MenuManager.setDifficulty(difficulty);
+                MenuManager.setLanguage(language);
                 SceneManager.LoadScene("GameOverScene");
             }
             difficulty = MenuManager.getDifficulty();
+            language = MenuManager.getLanguage();
             if (difficulty == "Easy") { mainTimer = 10.04f; scoreDifficulty = 1; }//setam dificultate +score+timp pe easy
             else if (difficulty == "Medium") { mainTimer = 7.54f; scoreDifficulty = 2; }//setam pentru mediu
             else { mainTimer = 5.04f; scoreDifficulty = 3; }
@@ -77,6 +85,14 @@ namespace Trivia
 
             Score.text = "Score: " + score.ToString();
             //Debug.Log(currentQuestion.getQuestion());
+        }
+        public static string getDifficulty()
+        {
+            return difficulty;
+        }
+        public static string getLanguage()
+        {
+            return language;
         }
         public void setCurrentQuestion()
         {

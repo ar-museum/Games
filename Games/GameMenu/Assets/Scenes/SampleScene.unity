@@ -694,7 +694,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1011933265}
+      - m_Target: {fileID: 0}
         m_MethodName: CalculateScore
         m_Mode: 1
         m_Arguments:
@@ -1220,7 +1220,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DragFirst
           m_Mode: 1
           m_Arguments:
@@ -1237,7 +1237,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DropFirst
           m_Mode: 1
           m_Arguments:
@@ -1422,7 +1422,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DragThird
           m_Mode: 1
           m_Arguments:
@@ -1439,7 +1439,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DropThird
           m_Mode: 1
           m_Arguments:
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1011933263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027908d9e60acd64daeb565a38b97a65, type: 3}
+  m_Script: {fileID: 11500000, guid: 8475c68e7654b59459c21b74c0f376cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firstName: {fileID: 702991431}
@@ -1512,7 +1512,6 @@ MonoBehaviour:
   fourthPhoto: {fileID: 1111845367}
   fifthPhoto: {fileID: 717972587}
   verifyButton: {fileID: 507428488}
-  backGround: {fileID: 654752969}
   firstInitialPos: {x: 0, y: 0}
   secondInitialPos: {x: 0, y: 0}
   thirdInitialPos: {x: 0, y: 0}
@@ -1691,7 +1690,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DragFourth
           m_Mode: 1
           m_Arguments:
@@ -1708,7 +1707,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DropFourth
           m_Mode: 1
           m_Arguments:
@@ -1819,7 +1818,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DragFifth
           m_Mode: 1
           m_Arguments:
@@ -1836,7 +1835,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DropFifth
           m_Mode: 1
           m_Arguments:
@@ -2021,7 +2020,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DragSecond
           m_Mode: 1
           m_Arguments:
@@ -2038,7 +2037,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1011933265}
+        - m_Target: {fileID: 0}
           m_MethodName: DropSecond
           m_Mode: 1
           m_Arguments:

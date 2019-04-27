@@ -2,6 +2,7 @@
 using System.IO;
 using manageQuestions;
 using UnityEngine;
+using meniu;
 using System.Collections.Generic;
 
 namespace manageQuestions
@@ -68,6 +69,7 @@ namespace manageQuestions
     {
         public QuestionArray loadJson()
         {
+            Debug.Log(MenuManager.getDifficulty());
             string language = MenuManager.getLanguage();
             if (language == "Romanian")
             {
@@ -77,7 +79,7 @@ namespace manageQuestions
                     //Debug.Log(json);
                     //List<Question> deserialized = JsonUtility.FromJson<List<Question>>(json);
                     QuestionArray deserialized = JsonUtility.FromJson<QuestionArray>(json);
-
+                    
                     Debug.Log(deserialized.questions[0].getQuestion());
                     for (int i = 0; i < deserialized.questions.Count; i++)
                     {

@@ -243,7 +243,6 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-c39c2b59589242991fac525971363590 Scripts.dll:.Manager
 11319334e5365797f8056694f9b5dae4 Scripts.dll:TMPro.Examples.ObjectSpin
 05624e878fff832f22b7d89327b18d15 Scripts.dll:MaterialUI.RippleConfig
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
@@ -277,6 +276,7 @@ a1ca1237bad0f30ea5ba8f4060929114 Scripts.dll:TMPro.Examples.TMP_TextSelector_B
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 acd72a07c78cc110f3365ba25bbf8de3 Scripts.dll:MaterialUI.CheckBoxToggler
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
+2b55a91c1326c124ae6d7923814165c6 Scripts.dll:.Manager
 ca5a49d24e59b50ddb079b4076e072fd Scripts.dll:MaterialUI.ScreenConfig
 27e5341178f188b89bdc6495710b590c Scripts.dll:TMPro.Examples.Benchmark01_UGUI
 8a874a8207a7664bdf44e61f28717254 Scripts.dll:TMPro.Examples.SkewTextExample
@@ -298,6 +298,7 @@ c12f6929b034322884ced721fca65b10 Scripts.dll:TMPro.Examples.TextMeshProFloatingT
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 0784d4fd5b93bd75440d01eb2fac4233 Scripts.dll:TMPro.Examples.VertexShakeA
+2b55a91c1326c124ae6d7923814165c6 Scripts.dll:.Manager
 8b1fe5dfdcf943fb3b72506b9f19335f Scripts.dll:.EnvMapAnimator
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 0077fc8e4fbae67f80e80ebd534de5a0 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour

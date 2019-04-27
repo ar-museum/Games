@@ -9,41 +9,39 @@ public class Manager : MonoBehaviour
     public GameObject firstName, secondName, thirdName, fourthName, fifthName,
         firstInput, secondInput, thirdInput, fourthInput, fifthInput,
         firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto,
-        verifyButton, backGround;
+        verifyButton;
 
     public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos, temp;
+
+    static Vector2[] namePositionArray = new[] { new Vector2(Screen.width/2 + Screen.width/4.5f, Screen.height/2 - Screen.height/2.5f),
+        new Vector2(Screen.width / 2 , Screen.height / 2 - Screen.height/4),
+        new Vector2(Screen.width / 2 - Screen.width / 3, Screen.height / 2 - Screen.height/7),
+        new Vector2(Screen.width / 2 + Screen.width / 3, Screen.height / 2 - Screen.height/4.5f),
+        new Vector2(Screen.width / 2 - Screen.width/2.5f , Screen.height / 2 - Screen.height/3) };
+
+    static Vector2[] photoPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2 + Screen.height / 4.5f),
+        new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
+        new Vector2(Screen.width/2, Screen.height / 2 + Screen.height / 4.5f),
+        new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
+        new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2 + Screen.height / 4.5f) };
+
+    static Vector2[] inputPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2),
+        new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2),
+        new Vector2(Screen.width/2, Screen.height / 2),
+        new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2),
+        new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2) };
 
     public TextMeshProUGUI scoreText;
 
     void Start()
     {
-        RectTransform rt = (RectTransform)backGround.transform;
-        Debug.Log(rt.rect.width);
-        Vector2[] namePositionArray = new[] { new Vector2(rt.rect.width/2 + rt.rect.width/4.5f, rt.rect.height/2 - rt.rect.height/2.5f),
-        new Vector2(rt.rect.width / 2 , rt.rect.height / 2 - rt.rect.height/4),
-        new Vector2(rt.rect.width / 2 - rt.rect.width / 3, rt.rect.height / 2 - rt.rect.height/7),
-        new Vector2(rt.rect.width / 2 + rt.rect.width / 3, rt.rect.height / 2 - rt.rect.height/4.5f),
-        new Vector2(rt.rect.width / 2 - rt.rect.width/2.5f , rt.rect.height / 2 - rt.rect.height/3) };
-
-        Vector2[] photoPositionArray = new[] { new Vector2(rt.rect.width  /*- rt.rect.width / 2.7f*/, rt.rect.height/2 /*+ rt.rect.height / 4.5f*/),
-        new Vector2(rt.rect.width / 2 - rt.rect.width / 5.32f, rt.rect.height / 2 + rt.rect.height / 4.5f),
-        new Vector2(rt.rect.width/2, rt.rect.height / 2 + rt.rect.height / 4.5f),
-        new Vector2(rt.rect.width / 2 + rt.rect.width / 5.32f, rt.rect.height / 2 + rt.rect.height / 4.5f),
-        new Vector2(rt.rect.width / 2 + rt.rect.width / 2.7f, rt.rect.height / 2 + rt.rect.height / 4.5f) };
-
-        Vector2[] inputPositionArray = new[] { new Vector2(rt.rect.width / 2 - rt.rect.width / 2.7f, rt.rect.height/2),
-        new Vector2(rt.rect.width / 2 - rt.rect.width / 5.32f, rt.rect.height / 2),
-        new Vector2(rt.rect.width/2, rt.rect.height / 2),
-        new Vector2(rt.rect.width / 2 + rt.rect.width / 5.32f, rt.rect.height / 2),
-        new Vector2(rt.rect.width / 2 + rt.rect.width / 2.7f, rt.rect.height / 2) };
-
-        for (int i=0;i<5;i++)
+        for (int i = 0; i < 5; i++)
         {
-            int rnd = Random.Range(0,5);
+            int rnd = Random.Range(0, 5);
             temp = namePositionArray[rnd];
             namePositionArray[rnd] = namePositionArray[i];
             namePositionArray[i] = temp;
-        }  
+        }
         firstName.transform.position = firstInitialPos = namePositionArray[0];
         secondName.transform.position = secondInitialPos = namePositionArray[1];
         thirdName.transform.position = thirdInitialPos = namePositionArray[2];
