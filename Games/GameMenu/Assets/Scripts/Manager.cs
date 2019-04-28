@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
 
-public class ManagerDrag : MonoBehaviour
+public class Manager : MonoBehaviour
 {
     public GameObject firstName, secondName, thirdName, fourthName, fifthName,
         firstInput, secondInput, thirdInput, fourthInput, fifthInput,
@@ -20,8 +20,10 @@ public class ManagerDrag : MonoBehaviour
 
     void Start()
     {
-        //Screen.orientation = ScreenOrientation.LandscapeLeft;
-        Debug.Log("Ceva");  
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        //Debug.Log(Screen.width + " " + Screen.height);
+        Screen.SetResolution(650, 310, true);
+        //Debug.Log("Ceva");  
         calculatePositions(); 
         for (int i = 0; i < 5; i++)
         {

@@ -18,6 +18,7 @@ namespace Trivia
         public static string language;
         public static string difficulty;
         public static float scoreDifficulty;
+        private string music;
         //static string language;//s-ar putea sa nu avem nevoie de el
 
         bool wasClicked = false;
@@ -46,7 +47,7 @@ namespace Trivia
             wasClicked = false;
             language = MenuManager.getLanguage();
             Debug.Log(language);
-            
+            music = MenuManager.getMusic();
             difficulty = MenuManager.getDifficulty();
             Debug.Log(difficulty);
             if (questions == null)
@@ -70,6 +71,7 @@ namespace Trivia
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
                 MenuManager.setDifficulty(difficulty);
                 MenuManager.setLanguage(language);
+                MenuManager.setMusic(music);
                 SceneManager.LoadScene("GameOverScene");
             }
             difficulty = MenuManager.getDifficulty();

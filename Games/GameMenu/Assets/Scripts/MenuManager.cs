@@ -10,18 +10,22 @@ namespace meniu
     public class MenuManager : MonoBehaviour
     {
         private static string difficulty;//in cazul in care nu se seteaza nimic
-        private static string language;//      -      //         -
+        private static string language;//
+        private static string music;
         public TMP_Dropdown difficultyDropdownMenu;
         public TMP_Dropdown languageDropdownMenu;
+        public Toggle musicOn;
+
         public void Start()
         {
-            if (difficulty == null && GameManager.getDifficulty() != null)
-                difficulty = GameManager.getDifficulty();
-            //else difficulty = "Easy";
-            if (language == null && GameManager.getLanguage() != null)
-                language = GameManager.getLanguage();
-            //else language = "Romanian";
-            //difficultyDropdownMenu.GetComponentInChildren<Text>() = difficulty;
+           if (music == null)
+                music = "On";
+            if (music == "On") musicOn.isOn = true;
+            else {
+                musicOn.isOn = false;
+                AudioListener.pause = true;
+            }
+
             if (difficulty == null) difficulty = "Easy";
             if (language == null) language = "Romanian";
             if (language == "Romanian") languageDropdownMenu.value = 0;
@@ -30,7 +34,7 @@ namespace meniu
             if (difficulty=="Easy") difficultyDropdownMenu.value = 0;
             else if (difficulty == "Medium") difficultyDropdownMenu.value = 1;
             else if (difficulty == "Hard") difficultyDropdownMenu.value = 2;
-
+            
         }
         public void loadDragDrop()
         {
@@ -39,6 +43,9 @@ namespace meniu
         public void MuteSound()
         {
             AudioListener.pause = !AudioListener.pause;
+            if (AudioListener.pause == true)
+                music = "Off";
+            else music = "On";
         }
 
         public static string getDifficulty()
@@ -58,6 +65,14 @@ namespace meniu
         public static void setLanguage(string langguage)
         {
             language = langguage;
+        }
+        public static string getMusic()
+        {
+            return music;
+        }
+        public static void setMusic(string musicc)
+        {
+            music = musicc;
         }
         public void DifficultyManager() // done
         {
@@ -98,7 +113,7 @@ namespace meniu
             }
             Debug.Log(language);
         }
-
+      
         public void loadTrivia()
         {
             SceneManager.LoadScene("LaunchingTrivia");

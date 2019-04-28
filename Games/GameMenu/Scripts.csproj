@@ -60,8 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ManagerDragDrop.cs" />
-    <Compile Include="Assets\ManagerForBetween.cs" />
     <Compile Include="Assets\MaterialUI\Examples\Scripts\04 - RadioButton\Example04.cs" />
     <Compile Include="Assets\MaterialUI\Examples\Scripts\05 - Sliders\Example05.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\Anim.cs" />
@@ -75,7 +73,6 @@
     <Compile Include="Assets\MaterialUI\Scripts\FPSCounter.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\HSBColor.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\InputFieldConfig.cs" />
-    <Compile Include="Assets\MaterialUI\Scripts\Manager.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\MaterialGlobals.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\MaterialUIScaler.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\MaterialUIVersion.cs" />
@@ -106,7 +103,9 @@
     <Compile Include="Assets\MaterialUI\Scripts\ToggleConfig.cs" />
     <Compile Include="Assets\MaterialUI\Scripts\ToggleTextChanger.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\KeepMusicAlive.cs" />
     <Compile Include="Assets\Scripts\Manager.cs" />
+    <Compile Include="Assets\Scripts\ManagerForBetween.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\OverScreenManager.cs" />
     <Compile Include="Assets\Scripts\Question.cs" />

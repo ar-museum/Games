@@ -6,6 +6,7 @@ Assets/Scenes/Menu.unity
 Assets/Scenes/MainLevel.unity
 Assets/Scenes/GameOverScene.unity
 Assets/Scenes/SampleScene.unity
+Assets/Scenes/LaunchingTrivia.unity
 SceneListEnd?
 9e279d733bf433124f00c114d6a9fb16 Scripts.dll:MaterialUI.RippleAnim
 a9d155fa04c28a0981265532fe9fb31d Scripts.dll:MaterialUI.NavDrawerConfig
@@ -126,6 +127,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 cc1f5721edfce15a2514f776e9dad783 Scripts.dll:MaterialUI.DialogBoxConfig
+71bb6a6b6c8f052f948db64c7dd3ca4f Scripts.dll:.KeepMusicAlive
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 ac1712d223a84a4149bb2f717af2d86a Scripts.dll:MaterialUI.ButtonInteractableControl
 71bb6a6b6c8f052f948db64c7dd3ca4f Scripts.dll:MaterialUI.Anim
@@ -139,6 +141,7 @@ dd7520b7d4e690e8c593273e7b9fbe80 Scripts.dll:TMPro.Examples.TMP_TextEventCheck
 553aa9183a3f8f2b27789a67ff1105ef Scripts.dll:MaterialUI.ToastAnim
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 0769963ca05483a9f7e743b9118b3fba Scripts.dll:TMPro.TMP_TextEventHandler
+2bd35fbf67d87e5396d0729ac7caf1f7 Scripts.dll:.ManagerForBetween
 47930f3b40e24ef5b3b5e3d9ada7097a Scripts.dll:TMPro.Examples.Benchmark01
 0077fc8e4fbae67f80e80ebd534de5a0 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f8b139fcde9fda6214245df246415cc7 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -276,7 +279,6 @@ a1ca1237bad0f30ea5ba8f4060929114 Scripts.dll:TMPro.Examples.TMP_TextSelector_B
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 acd72a07c78cc110f3365ba25bbf8de3 Scripts.dll:MaterialUI.CheckBoxToggler
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
-2b55a91c1326c124ae6d7923814165c6 Scripts.dll:.Manager
 ca5a49d24e59b50ddb079b4076e072fd Scripts.dll:MaterialUI.ScreenConfig
 27e5341178f188b89bdc6495710b590c Scripts.dll:TMPro.Examples.Benchmark01_UGUI
 8a874a8207a7664bdf44e61f28717254 Scripts.dll:TMPro.Examples.SkewTextExample
@@ -336,7 +338,7 @@ cd67f3e1e9ccac6db86c1564cea5a827 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 69167579cf7fcbb2676fc1e675963dcd Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-55ce6966c5210ebecf6203edcfef50b1 Scripts.dll:.MenuManager
+760932878cce201e43aebf23e3747346 Scripts.dll:meniu.MenuManager
 4de5bce6e9d040dd04f8abb2acd3e6b1 Scripts.dll:.Example04
 756be19100ea5ea222c57288694673a4 Scripts.dll:MaterialUI.TextInputLine
 0077fc8e4fbae67f80e80ebd534de5a0 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
