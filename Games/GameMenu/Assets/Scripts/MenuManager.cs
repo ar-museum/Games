@@ -21,8 +21,16 @@ namespace meniu
             if (language == null && GameManager.getLanguage() != null)
                 language = GameManager.getLanguage();
             //else language = "Romanian";
+            //difficultyDropdownMenu.GetComponentInChildren<Text>() = difficulty;
             if (difficulty == null) difficulty = "Easy";
             if (language == null) language = "Romanian";
+            if (language == "Romanian") languageDropdownMenu.value = 0;
+            else if (language == "English") languageDropdownMenu.value = 1;
+            else if(language == "French") languageDropdownMenu.value = 2;
+            if (difficulty=="Easy") difficultyDropdownMenu.value = 0;
+            else if (difficulty == "Medium") difficultyDropdownMenu.value = 1;
+            else if (difficulty == "Hard") difficultyDropdownMenu.value = 2;
+
         }
         public void loadDragDrop()
         {
@@ -57,14 +65,16 @@ namespace meniu
             {
                 case 0:
                     difficulty = difficultyDropdownMenu.options[difficultyDropdownMenu.value].text;
-                   // difficultyDropdownMenu.GetComponentInChildren<Text>().GetComponent("Label").text = difficulty;
+                    difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
                     Debug.Log("Easy");
                     break;
                 case 1:
                     difficulty = difficultyDropdownMenu.options[difficultyDropdownMenu.value].text;
+                    difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
                     break;
                 case 2:
                     difficulty = difficultyDropdownMenu.options[difficultyDropdownMenu.value].text;
+                    difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
                     break;
             }
             Debug.Log(difficulty)   ;
