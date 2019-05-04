@@ -80,16 +80,19 @@ namespace meniu
             {
                 case 0:
                     difficulty = difficultyDropdownMenu.options[difficultyDropdownMenu.value].text;
-                    difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
+                   // difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
+                    difficultyDropdownMenu.value = 0;
                     Debug.Log("Easy");
                     break;
                 case 1:
                     difficulty = difficultyDropdownMenu.options[difficultyDropdownMenu.value].text;
-                    difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
+                  //  difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
+                    difficultyDropdownMenu.value = 1;
                     break;
                 case 2:
                     difficulty = difficultyDropdownMenu.options[difficultyDropdownMenu.value].text;
-                    difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
+                   // difficultyDropdownMenu.GetComponentInChildren<Text>().text = difficulty;
+                    difficultyDropdownMenu.value = 2;
                     break;
             }
             Debug.Log(difficulty)   ;
@@ -101,13 +104,15 @@ namespace meniu
             {
                 case 0:
                     language = languageDropdownMenu.options[languageDropdownMenu.value].text;
-
+                   languageDropdownMenu.value = 0;
                     break;
                 case 1:
                     language = languageDropdownMenu.options[languageDropdownMenu.value].text;
+                    languageDropdownMenu.value = 1;
                     break;
                 case 2:
                     language = languageDropdownMenu.options[languageDropdownMenu.value].text;
+                    languageDropdownMenu.value = 2;
                     break;
                    
             }
