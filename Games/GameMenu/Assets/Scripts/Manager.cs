@@ -12,16 +12,14 @@ public class Manager : MonoBehaviour
 
     public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos, temp;
 
-    static Vector2[] namePositionArray;
-    static Vector2[] photoPositionArray;
-    static Vector2[] inputPositionArray;
+    static Vector3[] namePositionArray;
+    static Vector3[] photoPositionArray;
+    static Vector3[] inputPositionArray;
     public TextMeshProUGUI scoreText;
 
     void Start()
     {
-        //Screen.orientation = ScreenOrientation.LandscapeLeft;
-        //Screen.SetResolution(650, 310, true); 
-        calculatePositions(); 
+        getInitialPositions(); 
         for (int i = 0; i < 5; i++)
         {
             int rnd = Random.Range(0, 5);
@@ -56,6 +54,32 @@ public class Manager : MonoBehaviour
         thirdInput.transform.position = inputPositionArray[2];
         fourthInput.transform.position = inputPositionArray[3];
         fifthInput.transform.position = inputPositionArray[4];
+        firstInitialPos = firstName.transform.position;
+        secondInitialPos = secondName.transform.position;
+        thirdInitialPos = thirdName.transform.position;
+        fourthInitialPos = fourthName.transform.position;
+        fifthInitialPos = fifthName.transform.position;
+    }
+
+    public void getInitialPositions()
+    {
+        photoPositionArray = new[] { firstPhoto.transform.position,
+        secondPhoto.transform.position,
+        thirdPhoto.transform.position,
+        fourthPhoto.transform.position,
+        fifthPhoto.transform.position};
+
+        namePositionArray = new[] { firstName.transform.position,
+        secondName.transform.position,
+        thirdName.transform.position,
+        fourthName.transform.position,
+        fifthName.transform.position};
+
+        inputPositionArray = new[] { firstInput.transform.position,
+        secondInput.transform.position,
+        thirdInput.transform.position,
+        fourthInput.transform.position,
+        fifthInput.transform.position};
     }
 
     public void DragFirst()
@@ -67,26 +91,7 @@ public class Manager : MonoBehaviour
     {
         secondName.transform.position = Input.mousePosition;
     }
-    public void calculatePositions()
-    {
-         namePositionArray = new[] { new Vector2(Screen.width/2 + Screen.width/4.5f, Screen.height/2 - Screen.height/2.5f),
-        new Vector2(Screen.width / 2 , Screen.height / 2 - Screen.height/4),
-        new Vector2(Screen.width / 2 - Screen.width / 3, Screen.height / 2 - Screen.height/7),
-        new Vector2(Screen.width / 2 + Screen.width / 3, Screen.height / 2 - Screen.height/4.5f),
-        new Vector2(Screen.width / 2 - Screen.width/2.5f , Screen.height / 2 - Screen.height/3) };
-
-        photoPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2 + Screen.height / 4.5f),
-        new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
-        new Vector2(Screen.width/2, Screen.height / 2 + Screen.height / 4.5f),
-        new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2 + Screen.height / 4.5f),
-        new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2 + Screen.height / 4.5f) };
-
-         inputPositionArray = new[] { new Vector2(Screen.width / 2 - Screen.width / 2.7f, Screen.height/2),
-        new Vector2(Screen.width / 2 - Screen.width / 5.32f, Screen.height / 2),
-        new Vector2(Screen.width/2, Screen.height / 2),
-        new Vector2(Screen.width / 2 + Screen.width / 5.32f, Screen.height / 2),
-        new Vector2(Screen.width / 2 + Screen.width / 2.7f, Screen.height / 2) };
-    }
+    
     public void DragThird()
     {
         thirdName.transform.position = Input.mousePosition;
@@ -329,5 +334,10 @@ public class Manager : MonoBehaviour
             score++;
         scoreText.text = "Your score: " + score.ToString();
         StartCoroutine(Timer());
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
