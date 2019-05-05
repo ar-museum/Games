@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
@@ -20,10 +19,8 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-        //Debug.Log(Screen.width + " " + Screen.height);
-        Screen.SetResolution(650, 310, true);
-        //Debug.Log("Ceva");  
+        //Screen.orientation = ScreenOrientation.LandscapeLeft;
+        //Screen.SetResolution(650, 310, true); 
         calculatePositions(); 
         for (int i = 0; i < 5; i++)
         {
@@ -49,7 +46,6 @@ public class Manager : MonoBehaviour
             inputPositionArray[i] = temp;
 
         }
-        Debug.Log("MATA");
         firstPhoto.transform.position = photoPositionArray[0];
         secondPhoto.transform.position = photoPositionArray[1];
         thirdPhoto.transform.position = photoPositionArray[2];

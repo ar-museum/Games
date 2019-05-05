@@ -44,6 +44,7 @@ namespace Trivia
 
         public void Start()
         {
+
             wasClicked = false;
             language = MenuManager.getLanguage();
             Debug.Log(language);

@@ -892,7 +892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f5b2b4bce3ce94eb328aa68bc95bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainTimer: 5.04
   timer: {fileID: 1711258195}
   Score: {fileID: 1353459110}
   toBeDisplayed: {fileID: 1668434656}
@@ -2012,10 +2011,10 @@ RectTransform:
   m_Father: {fileID: 1217785375}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54, y: 133}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2, y: -145}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711258195
 MonoBehaviour:
@@ -2044,7 +2043,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
