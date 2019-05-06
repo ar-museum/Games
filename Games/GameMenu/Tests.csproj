@@ -61,7 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Tests\FirstTest.cs" />
-    <Compile Include="Assets\Tests\SimpleTestScript.cs" />
+    <Compile Include="Assets\Tests\LoadScene.cs" />
+    <Compile Include="Assets\Tests\MenuTests.cs" />
+    <Compile Include="Assets\Tests\TestingScore.cs" />
     <Compile Include="Assets\Tests\TestingTimer.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

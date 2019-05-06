@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Trivia;
 using manageQuestions;
 using UnityEngine.SceneManagement;
+using System;
 
 namespace Tests
 {
@@ -24,20 +25,23 @@ namespace Tests
         [UnityTest]
         public IEnumerator TimerColorRedWithEnumeratorPasses()//la fel ca mai jos
         {
-            SceneManager.LoadScene("MainLevel");
+            SceneManager.LoadScene("Menu");
             yield return new WaitForSeconds(1);
-            yield return new WaitForSeconds(GameManager.getMainTimer()-3);
+            SceneManager.LoadScene("MainLevel");
+            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(4.0f);
           Text timer = GameObject.Find("Timer").GetComponent<Text>();
             Debug.Log(timer.text);
             Assert.AreEqual(timer.color, Color.red);
             yield return null;
         }
         [UnityTest]
-        public IEnumerator TimerColorWithEnumeratorPasses()//verific daca timpul isi modifica culoarea in functie de valoarea sa
+        public IEnumerator TimerColorGreenWithEnumeratorPasses()//verific daca timpul isi modifica culoarea in functie de valoarea sa
         {
-            SceneManager.LoadScene("MainLevel");
+            SceneManager.LoadScene("Menu");
             yield return new WaitForSeconds(1);
-           
+            SceneManager.LoadScene("MainLevel");
+            yield return new WaitForSeconds(4);
             Text timer = GameObject.Find("Timer").GetComponent<Text>();
             Debug.Log(timer.text);
             Assert.AreEqual(timer.color, timer.color);
@@ -47,15 +51,19 @@ namespace Tests
         [UnityTest]
         public IEnumerator RightScoreIncrementWithEnumeratorPasses()//verific daca scorul se incarca cum trebuie
         {
+            SceneManager.LoadScene("Menu");
+            yield return new WaitForSeconds(1);
             SceneManager.LoadScene("MainLevel");
-            yield return new WaitForSeconds(0.5f);
-
+            yield return new WaitForSeconds(4);
 
             float myScore = GameManager.score;
-            float difficulty = GameManager.scoreDifficulty;
+          string difficulty = GameManager.difficulty;
 
             Text question = GameObject.Find("Question").GetComponent<Text>();
             List < Question > myQuestions= GameManager.questions;
+            Text timer = GameObject.Find("Timer").GetComponent<Text>();
+
+
             for(int i=0;i<myQuestions.Count;i++)
             {
                 if(question.text.ToString()==myQuestions[i].question)
@@ -69,23 +77,33 @@ namespace Tests
                     
                     if (b1.GetComponentInChildren<Text>().text == myQuestions[i].getRightAnswer())
                     {
+                        //yield return new WaitForSeconds(1.5f);
                         Debug.Log(b1.GetComponentInChildren<Text>().text+" "+ myQuestions[i].getRightAnswer());
                         b1.onClick.Invoke();
                     }
                     else if (b2.GetComponentInChildren<Text>().text == myQuestions[i].getRightAnswer())
                     {
+                        //yield return new WaitForSeconds(1.5f);
                         Debug.Log(b2.GetComponentInChildren<Text>().text + " " + myQuestions[i].getRightAnswer());
                         b2.onClick.Invoke();
                     }
 
                     else
                     {
+                        //yield return new WaitForSeconds(1.5f);
                         Debug.Log(b3.GetComponentInChildren<Text>().text + " " + myQuestions[i].getRightAnswer());
                         b3.onClick.Invoke();
                     }
+                    
+                    if (String.Compare(timer.text, "2.50")>0)
+                        myScore++;
                 }
             }
-            Assert.AreEqual(myScore + GameManager.scoreDifficulty+1, GameManager.score);
+            float score;
+            if (GameManager.difficulty == "Easy") score = 1;
+            else if (GameManager.difficulty == "Medium") score = 2;
+            else score = 3;
+            Assert.AreEqual(myScore +score, GameManager.score);
             //yield return null;
         }
     }
@@ -94,12 +112,13 @@ namespace Tests
         [UnityTest]
         public IEnumerator nextQuestionComestWithEnumeratorPasses()//verific daca dupa ce expira timpul se incarca urmatoarea intrebare
         {
+            SceneManager.LoadScene("Menu");
+            yield return new WaitForSeconds(1);
             SceneManager.LoadScene("MainLevel");
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(2);
             Text currentQuestion = GameObject.Find("Question").GetComponent<Text>();
             string stringCurrentQuestion = currentQuestion.text;
-            Debug.Log(GameManager.getMainTimer()+1);
-            yield return new WaitForSeconds(GameManager.getMainTimer()+1);
+            yield return new WaitForSeconds(GameManager.getMainTimer());
             Text newQuestion = GameObject.Find("Question").GetComponent<Text>();
             string stringNewQuestion =newQuestion.text;
            
