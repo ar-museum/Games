@@ -9,6 +9,30 @@ using System.IO;
 
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.Linq;
+public class Images
+{
+    string link;
+   Texture2D texture;
+
+    public Texture2D getMyTexture()
+    {
+        return texture;
+    }
+    public void setLink(string link)
+    {
+        this.link = link;
+    }
+    public string getMyLink()
+    {
+        return link.Substring(0, link.Length-4);
+    }
+    public void setTexture(Texture2D texture)
+    {
+        this.texture = texture;
+    }
+
+}
 
 public class Manager : MonoBehaviour
 {
@@ -16,7 +40,8 @@ public class Manager : MonoBehaviour
     [SerializeField]
     Image firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto;
     public Sprite[] icons;
-  
+
+    public static List<Images> images=new List<Images>();
 
     public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos, temp;
 
@@ -24,68 +49,29 @@ public class Manager : MonoBehaviour
     static Vector3[] photoPositionArray;
     static Vector3[] inputPositionArray;
     public TextMeshProUGUI scoreText;
-    
-    IEnumerator GetTexture()
+
+    public static List<Images> getImages()
     {
-        string uri = "http://134.209.234.39/games/";
-        WebRequest request = WebRequest.Create(uri);
-        WebResponse response = request.GetResponse();
-        Regex regex = new Regex("<a href=\".*\">(?<name>.*.jpg)</a>");
-        List<string> links = new List<string>();
-        int numberofLinks = 0;
-        using (var reader = new StreamReader(response.GetResponseStream()))
-        {
-            string result = reader.ReadToEnd();
+        return images;
+    }
 
-            MatchCollection matches = regex.Matches(result);
-            if (matches.Count == 0)
-            {
-                Debug.Log("parse failed.");
-
-            }
-
-            foreach (Match match in matches)
-            {
-                if (!match.Success) { continue; }
-                links.Add((match.Groups["name"]).ToString());
-            }
-        }
-        for (int i = 0; i <5; i++)
-        {
-            Random rnd = new Random();
-            int x = Random.Range(0, links.Count);
-            
-            UnityWebRequest www = UnityWebRequestTexture.GetTexture("http://134.209.234.39/games/"+links[x]);
-            yield return www.SendWebRequest();
-            if (www.isNetworkError || www.isHttpError)
-            {
-                Debug.Log(www.error);
-            }
-
-            else
-            {
-                Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                if (i == 0) { setImage(firstPhoto, myTexture); firstName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
-                else if (i == 1) { setImage(secondPhoto, myTexture); secondName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
-                else if (i == 2) { setImage(thirdPhoto, myTexture); thirdName.GetComponentInChildren<Text>().text = links[x].Substring(0,links[x].Length-4); }
-                else if (i == 3) { setImage(fourthPhoto, myTexture);fourthName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
-                else { setImage(fifthPhoto, myTexture);fifthName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
-
-            }
-                    links.Remove(links[x]);
-                }
-
-
-
-                }
-    public  void setImage(Image  image, Texture2D myTexture)
+    public  void setImage(Image  image1, Texture2D myTex)
     {
-        Sprite phote = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
-        image.sprite = phote;
+        Sprite phote = Sprite.Create(myTex, new Rect(0.0f, 0.0f, myTex.width, myTex.height), new Vector2(0.5f, 0.5f), 100.0f);
+        image1.sprite = phote;
+    }
+    void Images()
+    {
+        images = images.OrderBy(x => Random.value).ToList();
+        setImage(firstPhoto, images[0].getMyTexture()); firstName.GetComponentInChildren<Text>().text = images[0].getMyLink();
+        setImage(secondPhoto, images[1].getMyTexture()); secondName.GetComponentInChildren<Text>().text = images[1].getMyLink();
+        setImage(thirdPhoto, images[2].getMyTexture()); thirdName.GetComponentInChildren<Text>().text = images[2].getMyLink();
+        setImage(fourthPhoto, images[3].getMyTexture()); fourthName.GetComponentInChildren<Text>().text = images[3].getMyLink();
+        setImage(fifthPhoto, images[4].getMyTexture()); fifthName.GetComponentInChildren<Text>().text = images[4].getMyLink();
     }
     void Start()
     {
-        StartCoroutine(GetTexture());
+        Images();
         getInitialPositions(); 
         for (int i = 0; i < 5; i++)
         {
