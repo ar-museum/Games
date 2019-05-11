@@ -36,6 +36,19 @@ namespace meniu
             else if (difficulty == "Hard") difficultyDropdownMenu.value = 2;
             
         }
+        public void loadDrag()
+        {
+            StartCoroutine(LoadAsynchronously());
+        }
+        IEnumerator LoadAsynchronously()
+        {
+            AsyncOperation operation = SceneManager.LoadSceneAsync("SampleScene");
+            while(!operation.isDone)
+            {
+                Debug.Log(operation.progress);
+                yield return null;
+            }
+        }
         public void loadDragDrop()
         {
             SceneManager.LoadScene("SampleScene");

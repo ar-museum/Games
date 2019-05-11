@@ -2,13 +2,21 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+using System.Net;
+using System.IO;
+
+using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 public class Manager : MonoBehaviour
 {
-    public GameObject firstName, secondName, thirdName, fourthName, fifthName,
-        firstInput, secondInput, thirdInput, fourthInput, fifthInput,
-        firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto,
-        verifyButton;  
+    public GameObject firstName, secondName, thirdName, fourthName, fifthName, firstInput, secondInput, thirdInput, fourthInput, fifthInput, verifyButton;
+    [SerializeField]
+    Image firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto;
+    public Sprite[] icons;
+  
 
     public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos, temp;
 
@@ -16,9 +24,68 @@ public class Manager : MonoBehaviour
     static Vector3[] photoPositionArray;
     static Vector3[] inputPositionArray;
     public TextMeshProUGUI scoreText;
+    
+    IEnumerator GetTexture()
+    {
+        string uri = "http://134.209.234.39/games/";
+        WebRequest request = WebRequest.Create(uri);
+        WebResponse response = request.GetResponse();
+        Regex regex = new Regex("<a href=\".*\">(?<name>.*.jpg)</a>");
+        List<string> links = new List<string>();
+        int numberofLinks = 0;
+        using (var reader = new StreamReader(response.GetResponseStream()))
+        {
+            string result = reader.ReadToEnd();
 
+            MatchCollection matches = regex.Matches(result);
+            if (matches.Count == 0)
+            {
+                Debug.Log("parse failed.");
+
+            }
+
+            foreach (Match match in matches)
+            {
+                if (!match.Success) { continue; }
+                links.Add((match.Groups["name"]).ToString());
+            }
+        }
+        for (int i = 0; i <5; i++)
+        {
+            Random rnd = new Random();
+            int x = Random.Range(0, links.Count);
+            
+            UnityWebRequest www = UnityWebRequestTexture.GetTexture("http://134.209.234.39/games/"+links[x]);
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+
+            else
+            {
+                Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+                if (i == 0) { setImage(firstPhoto, myTexture); firstName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
+                else if (i == 1) { setImage(secondPhoto, myTexture); secondName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
+                else if (i == 2) { setImage(thirdPhoto, myTexture); thirdName.GetComponentInChildren<Text>().text = links[x].Substring(0,links[x].Length-4); }
+                else if (i == 3) { setImage(fourthPhoto, myTexture);fourthName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
+                else { setImage(fifthPhoto, myTexture);fifthName.GetComponentInChildren<Text>().text = links[x].Substring(0, links[x].Length - 4); }
+
+            }
+                    links.Remove(links[x]);
+                }
+
+
+
+                }
+    public  void setImage(Image  image, Texture2D myTexture)
+    {
+        Sprite phote = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
+        image.sprite = phote;
+    }
     void Start()
     {
+        StartCoroutine(GetTexture());
         getInitialPositions(); 
         for (int i = 0; i < 5; i++)
         {
@@ -59,6 +126,35 @@ public class Manager : MonoBehaviour
         thirdInitialPos = thirdName.transform.position;
         fourthInitialPos = fourthName.transform.position;
         fifthInitialPos = fifthName.transform.position;
+    }
+    public void set()
+    {
+
+
+        object[] loadedIcons = Resources.LoadAll("Textures", typeof(Sprite));
+        for (int x = 0; x < loadedIcons.Length; x++)
+        {
+            Debug.Log(loadedIcons[x].ToString());
+        }
+        firstName.GetComponent<Text>().text = loadedIcons[0].ToString();
+        secondName.GetComponent<Text>().text = loadedIcons[1].ToString();
+        thirdName.GetComponent<Text>().text = loadedIcons[2].ToString();
+        fourthName.GetComponent<Text>().text = loadedIcons[3].ToString();
+        fifthName.GetComponent<Text>().text = loadedIcons[4].ToString();
+
+        icons = new Sprite[loadedIcons.Length];
+        for (int x = 0; x < loadedIcons.Length; x++)
+        {
+            icons[x] = (Sprite)loadedIcons[x];
+
+        }
+        firstPhoto.sprite = icons[0];
+        secondPhoto.sprite = icons[1];
+        thirdPhoto.sprite = icons[2];
+        fourthPhoto.sprite = icons[3];
+        fifthPhoto.sprite = icons[4];
+
+        // Debug.Log(loadedIcons.Length);
     }
 
     public void getInitialPositions()

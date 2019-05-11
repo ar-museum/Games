@@ -1,0 +1,305 @@
+{
+	"questions" : [
+		{
+			"question" : "Who invented the light bulb?",
+			"difficult" : "Easy",
+			"allAnswers" : [
+				"Thomas Alva Edison",
+        "Ion Creanga",
+				"Michael Faraday"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Who invented the light bulb?",
+			"difficult" : "Medium",
+			"allAnswers" : [
+				"Michael Faraday",
+				"Thomas Alva Edison",
+				"Thomas Newcomen"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Who invented the light bulb?",
+			"difficult" : "Hard",
+			"allAnswers" : [
+				"Thomas Savery",
+				"Thomas Alva Edison",
+				"Thomas Newcomen"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "For what scientist has been invented the program called Equalizer to help him to communicate?",
+			"difficult" : "Easy",
+			"allAnswers" :[
+				"Galileo Galilei",
+				"Stephen Hawking",
+				"George Eastman"
+			],
+			"rightAnswer" : "Stephen Hawking"
+		},
+		{
+            "question" : "In what year was invented the program called Equalizer that helped Stephen Hawking to communicate?",
+			"difficult" : "Hard",
+			"allAnswers" :[
+				"1952",
+				"1978",
+				"1986"
+			],
+			"rightAnswer" : "1986"
+		},
+		{
+			"question" : "Which were the fields of research of Stephen Hawking?",
+			"difficult" : "Medium",
+			"allAnswers" :[
+				"Quantum mechanics",
+				"General relativity",
+				"Quantum mechanics and general relativity"
+			],
+			"rightAnswer" : "Quantum mechanics and general relativity"
+		},
+		{
+			"question" : "Who is the creator of the formula E=mc^2?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"Mihai Eminescu",
+				"Albert Einstein",
+				"Lee De Forest"
+			],
+			"rightAnswer" : "Albert Einstein"
+		},
+		{
+			"question" : "In what country was born Albert Einstein?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Germania",
+				"Belgia",
+				"Franța"
+			],
+			"rightAnswer" : "Germania"
+		},
+		{
+			"question" : "In what year died Albert Einstein?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"1942",
+				"1955",
+				"1957"
+			],
+			"rightAnswer" : "1955"
+		},
+		{
+			"question" : "What was Isaac Newton?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"mathematician",
+				"physicist",
+				"playwright"
+			],
+			"rightAnswer" : "physicist"
+		},
+		{
+			"question" : "Who established the three universal laws of motion?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Isaac Newton",
+				"Galileo Galilei",
+				"Albert Einstein"
+			],
+			"rightAnswer" : "Isaac Newton"
+		},
+		{
+			"question" : "At what age died the physicist Isaac Newton?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"80 years",
+				"84 years",
+				"86 years"
+			],
+			"rightAnswer" : "84 years"
+		},
+		{
+			"question" : "How is nicknamed the beginning of the universe?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"Charleroi",
+				"Big Bang",
+				"Roald Dahl"
+			],
+			"rightAnswer" : "Big Bang"
+		},
+		{
+			"question" : "Who gave the name of the theory of the Big Bang?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Fred Hoyle",
+				"Edwin Hubble",
+				"George Gamow"
+			],
+			"rightAnswer" : "Fred Hoyle"
+		},
+		{
+			"question" : "Who opposed the idea that the Big Bang corresponds with creating the world from nothing?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"Christians",
+				"Catholic priest Georges Lemaître",
+				"Atheists"
+			],
+			"rightAnswer" : "Atheists"
+		},
+		{
+			"question" : "What is the name of the line between the center and the circumference of a circle?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"angle",
+				"radius",
+				"square"
+			],
+			"rightAnswer": "radius"
+		},
+		{
+			"question" : "How many moons has the Earth?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"two satellites",
+				"a satelitte",
+				"three satellites"
+			],
+			"rightAnswer": "a satelitte"
+		},
+		{
+			"question" : "Approximately what percentage is the oxygen in the air?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"12%",
+				"21%",
+				"31%"
+			],
+			"rightAnswer": "21%"
+		},
+		{
+			"question" : "What was the first person who has walked on Luna?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Yuri Gagarin",
+				"Neil Armstrong",
+				"Edward H. White"
+			],
+			"rightAnswer": "Neil Armstrong"
+		},
+		{
+			"question" : "What is the first device which can record and reproduce the sound?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"gramophone",
+				"tape recorder",
+				"phonograph"
+			],
+			"rightAnswer": "phonograph"
+		},
+		{
+			"question" : "What was the first person who has walked on Mars?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"Yuri Gagarin",
+				"None",
+				"Edward H. White"
+			],
+			"rightAnswer": "None"
+		},
+		{
+			"question" : "What is in the center of the Solar System?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Earth",
+				"Luna",
+				"Sun"
+			],
+			"rightAnswer": "Sun"
+		},
+		{
+			"question" : "On what planet is the largest volcano in the Solar System?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Terra",
+				"Marte",
+				"Jupiter"
+			],
+			"rightAnswer": "Marte"
+		},
+		{
+			"question" : "The last eclipse of the sun when Romania has had as much of the world took place on:",
+			"difficult": "Hard",
+			"allAnswers": [
+				"29 march 2006",
+				"15 april 2005",
+				"19 may 2009"
+			],
+			"rightAnswer": "29 march 2006"
+		},
+		{
+			"question" : "What was the capital of the Byzantine Empire?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Rome",
+				"Athens",
+				"Constantinople"
+			],
+			"rightAnswer": "Constantinople"
+		},
+		{
+			"question" : "Care e țara de proveniență a vikingilor?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Denmark",
+				"Ireland",
+				"Sweden"
+			],
+			"rightAnswer": "Denmark"
+		},
+		{
+			"question" : "What is the composition of the diamond?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"Oxygen, hydrogen and manganese",
+				"Pure carbon",
+				"Nitrogen and silicon"
+			],
+			"rightAnswer": "Pure carbon"
+		},
+		{
+			"question" : "What is the pressure unit?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Pascal",
+				"Ohm",
+				"Watt"
+			],
+			"rightAnswer": "Pascal"
+		},
+		{
+			"question" : "Which of the following is not a branch of biology?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Zoology",
+				"Virusology",
+				"Biochemistry"
+			],
+			"rightAnswer": "Biochemistry"
+		},
+		{
+			"question" : "What is composed, for the most part, the atmosphere of the planet Venus?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"hydrogen",
+				"helium",
+				"carbon dioxide gas"
+			],
+			"rightAnswer": "carbon dioxide gas"
+		}
+	]
+
+}

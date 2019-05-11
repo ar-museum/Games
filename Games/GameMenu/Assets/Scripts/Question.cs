@@ -73,7 +73,7 @@ namespace manageQuestions
             string language = MenuManager.getLanguage();
             if (language == "Romanian")
             {
-                TextAsset r = (TextAsset)Resources.Load("romana", typeof(TextAsset));
+                TextAsset r = (TextAsset)Resources.Load("Stiinta/romana", typeof(TextAsset));
                
                 string json = r.text;
                     //Debug.Log(json);
@@ -96,7 +96,7 @@ namespace manageQuestions
             }
             else if (language == "English")
             {
-                TextAsset r = (TextAsset)Resources.Load("engleza", typeof(TextAsset));
+                TextAsset r = (TextAsset)Resources.Load("Stiinta/engleza", typeof(TextAsset));
 
                 string json = r.text;
                
@@ -120,7 +120,7 @@ namespace manageQuestions
             }
             else
             {
-                TextAsset r = (TextAsset)Resources.Load("franceza", typeof(TextAsset));
+                TextAsset r = (TextAsset)Resources.Load("Stiinta/franceza", typeof(TextAsset));
 
                 string json = r.text;
                 //Debug.Log(json);

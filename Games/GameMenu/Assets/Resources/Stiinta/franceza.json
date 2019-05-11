@@ -1,0 +1,305 @@
+{
+	"questions" : [
+		{
+			"question" : "Qui a inventé l'ampoule ?",
+			"difficult" : "Easy",
+			"allAnswers" : [
+				"Thomas Alva Edison",
+				"Ion Creanga",
+				"Michael Faraday"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Qui a inventé l'ampoule ?",
+			"difficult" : "Medium",
+			"allAnswers" : [
+				"Michael Faraday",
+				"Thomas Alva Edison",
+				"Thomas Newcomen"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Qui a inventé l'ampoule ?",
+			"difficult" : "Hard",
+			"allAnswers" : [
+				"Thomas Savery",
+				"Thomas Alva Edison",
+				"Thomas Newcomen"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Pourquoi le scientifique a été inventé le programme appelé l'Égaliseur pour l'aider à communiquer ?",
+			"difficult" : "Easy",
+			"allAnswers" :[
+				"Galileo Galilei",
+				"Stephen Hawking",
+				"George Eastman"
+			],
+			"rightAnswer" : "Stephen Hawking"
+		},
+		{
+			"question" : "Dans ce que l'année était le programme d'Égaliseur inventé appelé ce qu'il a aidé Stephen Hawking à parler ?",
+			"difficult" : "Hard",
+			"allAnswers" :[
+				"1952",
+				"1978",
+				"1986"
+			],
+			"rightAnswer" : "1986"
+		},
+		{
+			"question" : "Qui était les domaines de la recherche de Stephen Hawking ?",
+			"difficult" : "Medium",
+			"allAnswers" :[
+				"La mécanique quantique",
+				"La relativité générale",
+				"La mécanique quantique et la relativité générale"
+			],
+			"rightAnswer" : "La mécanique quantique et la relativité générale"
+		},
+		{
+			"question" : "Qui est le créateur de la formule E=mc^2 ?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"Mihai Eminescu",
+				"Albert Einstein",
+				"Lee De Forest"
+			],
+			"rightAnswer" : "Albert Einstein"
+		},
+		{
+			"question" : "Dans ce que le pays est né Albert Einstein ?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Allemagne",
+				"Belgique",
+				"France"
+			],
+			"rightAnswer" : "Allemagne"
+		},
+		{
+			"question" : "Dans ce que l'année il est mort Albert Einstein ?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"1942",
+				"1955",
+				"1957"
+			],
+			"rightAnswer" : "1955"
+		},
+		{
+			"question" : "Quel était Isaac Newton ?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"mathématicien",
+				"physicien",
+				"dramaturge"
+			],
+			"rightAnswer" : "physicien"
+		},
+		{
+			"question" : "Qui a établi les trois lois universelles de mouvement ?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Isaac Newton",
+				"Galileo Galilei",
+				"Albert Einstein"
+			],
+			"rightAnswer" : "Isaac Newton"
+		},
+		{
+			"question" : "Quel âge est mort le physicien Isaac Newton ?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"80 ans",
+				"84 ans",
+				"86 ans"
+			],
+			"rightAnswer" : "84 ans"
+		},
+		{
+			"question" : "Comment est surnommé le début de l'univers ?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"Charleroi",
+				"Big Bang",
+				"Roald Dahl"
+			],
+			"rightAnswer" : "Big Bang"
+		},
+		{
+			"question" : "Qui a donné le nom de la théorie du Big Bang ?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Fred Hoyle",
+				"Edwin Hubble",
+				"George Gamow"
+			],
+			"rightAnswer" : "Fred Hoyle"
+		},
+		{
+			"question" : "Qui s'est opposé à l'idée que le Big Bang correspond avec la création du monde de quoi que ce soit ?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"Les chrétiens",
+				"Prêtre Catholique Georges Lemaitre",
+				"Les athées"
+			],
+			"rightAnswer" : "Les athées"
+		},
+		{
+			"question" : "Quel est le nom de la ligne entre le centre et la circonférence d'un cercle ?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"angle",
+				"rayon",
+				"carré"
+			],
+			"rightAnswer": "rayon"
+		},
+		{
+			"question" : "Combien de lunes ont la Terre ?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"deux satellites",
+				"un satellite",
+				"trois satellites"
+			],
+			"rightAnswer": "un satellite"
+		},
+		{
+			"question" : "Approximativement quel pourcentage est l'oxygène dans l'air ?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"12%",
+				"21%",
+				"31%"
+			],
+			"rightAnswer": "21%"
+		},
+		{
+			"question" : "Quelle est la première personne qui s'est embarquée à Luna ?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Yuri Gagarin",
+				"Neil Armstrong",
+				"Edward H. White"
+			],
+			"rightAnswer": "Neil Armstrong"
+		},
+		{
+			"question" : "C'était le premier dispositif qui peut enregistrer et reproduire le son ?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"gramophone",
+				"la radio",
+				"le phonographe"
+			],
+			"rightAnswer": "le phonographe"
+		},
+		{
+			"question" : "C'était la première personne qui s'est embarquée à Mars ?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"Yuri Gagarin",
+				"aucune",
+				"Edward H. White"
+			],
+			"rightAnswer": "aucune"
+		},
+		{
+			"question" : "Quel corps céleste est placé dans le centre du Système Solaire ?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"La Terre",
+				"Lune",
+				"Le Soleil"
+			],
+			"rightAnswer": "Le Soleil"
+		},
+		{
+			"question" : "Sur ce que la planète est le plus grand volcan dans le Système Solaire ?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Terre",
+				"Mars",
+				"Jupiter"
+			],
+			"rightAnswer": "Mars"
+		},
+		{
+			"question" : "La dernière éclipse du soleil quand la Roumanie a eu comme une grande partie du monde a eu lieu sur :",
+			"difficult": "Hard",
+			"allAnswers": [
+				"Le 29 mars 2006",
+				"Le 15 avril 2005",
+				"Le 19 mai 2009"
+			],
+			"rightAnswer": "Le 29 mars 2006"
+		},
+		{
+			"question" : "C'était le capital(la capitale) de l'Empire byzantin ?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Rome",
+				"Athènes",
+				"Constantinople"
+			],
+			"rightAnswer": "Constantinople"
+		},
+		{
+			"question" : "Qui est le pays d'origine du des Vikings ?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Danemark",
+				"Irlande",
+				"Suède"
+			],
+			"rightAnswer": "Danemark"
+		},
+		{
+			"question" : "Qu'est-ce qui est composé le diamant ?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"Oxygène, hydrogène et manganèse",
+				"Carbone Pur",
+				"Azote et silicium"
+			],
+			"rightAnswer": "Carbone Pur"
+		},
+		{
+			"question" : "Quelle est l'unité de pression ?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Pascal",
+				"Ohm",
+				"Watt"
+			],
+			"rightAnswer": "Pascal"
+		},
+		{
+			"question" : "Lequel de la chose suivante n'est pas une branche de biologie ?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Zoologie",
+				"Virusologie",
+				"Biochimie"
+			],
+			"rightAnswer": "Biochimie"
+		},
+		{
+			"question" : "Qu'est-ce qui est composé, pour la plupart, l'atmosphère de la Vénus de planète ?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"hydrogène",
+				"hélium",
+				"Gaz de dioxyde de carbone"
+			],
+			"rightAnswer": "Gaz de dioxyde de carbone"
+		}
+	]
+
+}

@@ -1,0 +1,304 @@
+{
+    "questions": [
+      {
+        "question": "Qui était le contemporain Mihai Eminescu?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "Ion Creangă et I.L Caragiale",
+          "Ion Iliescu",
+          "Viorel Lis"
+        ],
+        "rightAnswer": "Ion Creangă et I.L Caragiale"
+      },
+      {
+        "question": "Comment la petite amie de Mihai Eminescu l'a-t-elle appelée?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "Sânziana Micle",
+          "Dana Criminala",
+          "Veronica Micle"
+        ],
+        "rightAnswer": "Veronica Micle"
+      },
+      {
+        "question": "Quel est le nom de la société littéraire dont faisait partie Mihai Eminescu?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "Maçonnerie",
+          "Dacia Literar",
+          "Junimea"
+        ],
+        "rightAnswer": "Junimea"
+      },
+      {
+        "question": "Quel est le magazine dans lequel sont parus les plus importants poèmes de Mihai Eminescu?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "Dilema Veche Magazine",
+          "Taifasuri Magazine",
+          "Magazine Conversations Magazine"
+        ],
+        "rightAnswer": "Magazine Conversations Magazine"
+      },
+      {
+        "question": "Quel était le nom de la naissance de Mihai Eminescu à la naissance?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "Eminescovici",
+          "Eminovici",
+          "Eminevici"
+        ],
+        "rightAnswer": "Eminovici"
+      },
+      {
+        "question": "Combien de lettres Mihai Eminescu a-t-il écrites?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "4, les autres ont été perdus au poste",
+          "5 lettres",
+          "3, le reste sont des cartes postales"
+        ],
+        "rightAnswer": "5 lettres"
+      },
+      {
+        "question": "Combien d'histoires le poème de Lukeafarul écrit par Mihai Eminescu?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "94 bandes",
+          "98 bandes",
+          "100 bandes"
+        ],
+        "rightAnswer": "98 bandes"
+      },
+      {
+        "question": "Quelle est la fantastique nouvelle courte écrite par Mihai Eminescu?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "Pauvre Dionys",
+          "Bossul Dionys",
+          "Petit Dionys"
+        ],
+        "rightAnswer": "Pauvre Dionys"
+      },
+      {
+        "question": "A quel âge Mihai Eminescu est-il mort?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "39 ans",
+          "40 ans",
+          "41 ans"
+        ],
+        "rightAnswer": "39 ans"    
+      },
+      {
+        "question": "Quand est-il né?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "20 janvier 1850",
+          "15 janvier 1850",
+          "15 janvier 1851"
+        ],
+        "rightAnswer": "15 janvier 1850"
+      },
+      {
+        "question": "Quand est-il mort?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "15 juin 1889",
+          "16 juin 1890",
+          "15 juillet 1889"
+        ],
+        "rightAnswer": "15 juin 1889"
+      },
+      {
+        "question": "En quelle année connaît-il Ion Creanga?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "En 1875",
+          "En 1885",
+          "En 1890"
+        ],
+        "rightAnswer": "En 1875"
+      },
+      {
+        "question": "Où est-il né?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "Alba Iulia",
+          "Suceava",
+          "Botosani"
+        ],
+        "rightAnswer": "Botosani"
+      },
+      {
+        "question": "En quelle année l'inspecteur d'école est-il à Iasi et à Vaslui?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "en 1875",
+          "en 1883",
+          "en 1878"
+        ],
+        "rightAnswer": "en 1875"
+      },
+      {
+        "question": "Qui est Mihai Eminescu?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "un poète",
+          "un peintre",
+          "un musicien"
+        ],
+        "rightAnswer": "un poète"
+      },
+      {
+        "question": "L'enfant Mihai Eminescu est-il dans la famille?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "5ème",
+          "8ème",
+          "7ème"
+        ],
+        "rightAnswer": "7ème"
+      },
+      {
+        "question": "Comment s'appelle le père de Mihai Eminescu?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "Ioan Eminescu",
+          "Valeriu Eminoviciu",
+          "Gheorghe Eminovici"
+        ],
+        "rightAnswer": "Gheorghe Eminovici"
+      },
+      {
+        "question": "Comment la mère de Mihai Eminescu l'appelle-t-elle?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "Veronica",
+          "Raluca",
+          "Maria"
+        ],
+        "rightAnswer": "Raluca"
+      },
+      {
+        "question": "Combien de frères Mihai Eminescu avait-il?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "9 frères",
+          "8 frères",
+          "10 frères"
+        ],
+        "rightAnswer": "10 frères"
+      },
+      {
+        "question": "Pour qui s'est-il battu pour ne plus publier le poste de Mihai Eminescu?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "avec Iacob Negruzzi",
+          "avec Titu Maiorescu",
+          "avec Aron Pumnul"
+        ],
+        "rightAnswer": "avec Titu Maiorescu"
+      },
+      {
+        "question": "Combien de soeurs Mihai Eminescu avait-elle?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "4 soeurs",
+          "3 soeurs",
+          "2 soeurs"
+        ],
+        "rightAnswer": "4 soeurs"
+      },
+      {
+        "question": "Pourquoi la maladie a-t-elle souffert les deux soeurs de Mihai Eminescu?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "Typhus",
+          "La rougeole",
+          "La peste"
+        ],
+        "rightAnswer": "Typhus"
+      },
+      {
+        "question": "Laquelle des deux sœurs haïra Mihai Eminescu au moment où la maladie s’établira?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "Aglae, la sœur aînée",
+          "Henrieta, la soeur cadette",
+          "Les deux"
+        ],
+        "rightAnswer": "Henrieta, la soeur cadette"
+      },
+      {
+        "question": "Où a passé l'enfance de Michael Eminescu?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "à Ipotesti",
+          "à Medeleni",
+          "à Flamanzi"
+        ],
+        "rightAnswer": "à Ipotesti"
+      },
+      {
+        "question": "Comment s'appelait le professeur Mihai Eminescu?",
+        "difficult": "Hard",
+        "allAnswers": [
+          "Ion G. Sbiera",
+          "Iacob Negruzzi",
+          "Aron Pumnul"
+        ],
+        "rightAnswer": "Aron Pumnul"
+      },
+      {
+        "question": "A quelle société adhère Mihai Eminescu?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "Junimea",
+          "Est",
+          "Time"
+        ],
+        "rightAnswer": "Junimea"
+      },
+      {
+        "question": "De retour au pays à Iasi, Mihai Eminescu est nommé en 1874 directeur de ...",
+        "difficult": "Hard",
+        "allAnswers": [
+          "Bibliothèque centrale",
+          "Société Junimea",
+          "Inspection scolaire"
+        ],
+        "rightAnswer": "Bibliothèque centrale"
+      },
+      {
+        "question": "Quand il a rencontré Creanga, avec qui il devait nouer une amitié durable, Mihai Eminescu était ...",
+        "difficult": "Hard",
+        "allAnswers": [
+          "directeur de l'inspection scolaire de Iasi",
+          "examinateur de l'école (1875-1876)",
+          "directeur de la bibliothèque centrale"
+        ],
+        "rightAnswer": "examinateur de l'école (1875-1876)"
+      },
+      {
+        "question": "Quel était le grand amour de Mihai Eminescu?",
+        "difficult": "Easy",
+        "allAnswers": [
+          "Mirela",
+          "Raluca",
+          "Veronica"
+        ],
+        "rightAnswer": "Veronica"
+      },
+      {
+        "question": "Où est mort Mihai Eminescu?",
+        "difficult": "Medium",
+        "allAnswers": [
+          "Bucharest",
+          "Ipotesti",
+          "Iasi"
+        ],
+        "rightAnswer": "Bucharest"
+      }
+    ]
+  }

@@ -1,0 +1,305 @@
+{
+	"questions" : [
+		{
+			"question" : "Cine a inventat becul?",
+			"difficult" : "Easy",
+			"allAnswers" : [
+				"Thomas Alva Edison",
+				"Ion Creanga",
+				"Michael Faraday"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Cine a inventat becul?",
+			"difficult" : "Medium",
+			"allAnswers" : [
+				"Michael Faraday",
+				"Thomas Alva Edison",
+				"Thomas Newcomen"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Cine a inventat becul?",
+			"difficult" : "Hard",
+			"allAnswers" : [
+				"Thomas Savery",
+				"Thomas Alva Edison",
+				"Thomas Newcomen"
+			],
+			"rightAnswer" : "Thomas Alva Edison"
+		},
+		{
+			"question" : "Pentru ce om de știință a fost inventat programul numit Equalizer pentru a-l ajuta să comunice?",
+			"difficult" : "Easy",
+			"allAnswers" :[
+				"Galileo Galilei",
+				"Stephen Hawking",
+				"George Eastman"
+			],
+			"rightAnswer" : "Stephen Hawking"
+		},
+		{
+			"question" : "În ce an a fost inventat programul numit Equalizer ce îl ajuta pe Stephen Hawking să vorbească?",
+			"difficult" : "Hard",
+			"allAnswers" :[
+				"1952",
+				"1978",
+				"1986"
+			],
+			"rightAnswer" : "1986"
+		},
+		{
+			"question" : "Care erau domeniile de cercetare ale lui Stephen Hawking?",
+			"difficult" : "Medium",
+			"allAnswers" :[
+				"Mecanica cuantică",
+				"Relativitatea generală",
+				"Mecanica cuantică și relativitatea generală"
+			],
+			"rightAnswer" : "Mecanica cuantică și relativitatea generală"
+		},
+		{
+			"question" : "Cine este creatorul formulei E=mc^2?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"Mihai Eminescu",
+				"Albert Einstein",
+				"Lee De Forest"
+			],
+			"rightAnswer" : "Albert Einstein"
+		},
+		{
+			"question" : "În ce țară s-a născut Albert Einstein?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Germania",
+				"Belgia",
+				"Franța"
+			],
+			"rightAnswer" : "Germania"
+		},
+		{
+			"question" : "În ce an a murit Albert Einstein?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"1942",
+				"1955",
+				"1957"
+			],
+			"rightAnswer" : "1955"
+		},
+		{
+			"question" : "Ce a fost Isaac Newton?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"matematician",
+				"fizician",
+				"dramaturg"
+			],
+			"rightAnswer" : "fizician"
+		},
+		{
+			"question" : "Cine a stabilit cele trei legi universale ale miscării?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Isaac Newton",
+				"Galileo Galilei",
+				"Albert Einstein"
+			],
+			"rightAnswer" : "Isaac Newton"
+		},
+		{
+			"question" : "La ce vârstă a murit fizicianul Isaac Newton?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"80 de ani",
+				"84 de ani",
+				"86 de ani"
+			],
+			"rightAnswer" : "84 de ani"
+		},
+		{
+			"question" : "Cum mai este supranumit începutul Universului?",
+			"difficult" : "Easy",
+			"allAnswers":[
+				"Charleroi",
+				"Big Bang",
+				"Roald Dahl"
+			],
+			"rightAnswer" : "Big Bang"
+		},
+		{
+			"question" : "Cine a dat numele teoriei Big Bang?",
+			"difficult" : "Medium",
+			"allAnswers":[
+				"Fred Hoyle",
+				"Edwin Hubble",
+				"George Gamow"
+			],
+			"rightAnswer" : "Fred Hoyle"
+		},
+		{
+			"question" : "Cine s-a opus la ideea că Big Bang-ul corespunde cu creearea lumii din nimic?",
+			"difficult" : "Hard",
+			"allAnswers":[
+				"creștinii",
+				"preotul catolic Georges Lemaître",
+				"fizicienii atei"
+			],
+			"rightAnswer" : "fizicienii atei"
+		},
+		{
+			"question" : "Cum se numește linia dintre punctul central și linia de circumferință a unui cerc?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"unghi",
+				"rază",
+				"pătrat"
+			],
+			"rightAnswer": "rază"
+		},
+		{
+			"question" : "Câți sateliți naturali are Pământul?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"doi sateliți",
+				"un satelit",
+				"trei sateliți"
+			],
+			"rightAnswer": "un satelit"
+		},
+		{
+			"question" : "Aproximativ în ce procent se găsește oxigenul în aer?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"12%",
+				"21%",
+				"31%"
+			],
+			"rightAnswer": "21%"
+		},
+		{
+			"question" : "Care este prima persoană care a pășit pe Lună?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Yuri Gagarin",
+				"Neil Armstrong",
+				"Edward H. White"
+			],
+			"rightAnswer": "Neil Armstrong"
+		},
+		{
+			"question" : "Care a fost primul aparat care putea înregistra și reproduce sunetele?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"gramofonul",
+				"casetofonul",
+				"fonograful"
+			],
+			"rightAnswer": "fonograful"
+		},
+		{
+			"question" : "Care a fost prima persoană care a pășit pe Marte?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"Yuri Gagarin",
+				"niciuna",
+				"Edward H. White"
+			],
+			"rightAnswer": "niciuna"
+		},
+		{
+			"question" : "Ce corp ceresc se află în centrul Sistemului Solar?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Pământul",
+				"Luna",
+				"Soarele"
+			],
+			"rightAnswer": "Soarele"
+		},
+		{
+			"question" : "Pe ce planetă se află cel mai mare vulcan din Sistemul Solar?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Terra",
+				"Marte",
+				"Jupiter"
+			],
+			"rightAnswer": "Marte"
+		},
+		{
+			"question" : "Ultima eclipsă de Soare când România a avut maximul de pe glob a avut loc în data de:",
+			"difficult": "Hard",
+			"allAnswers": [
+				"29 martie 2006",
+				"15 aprilie 2005",
+				"19 mai 2009"
+			],
+			"rightAnswer": "29 martie 2006"
+		},
+		{
+			"question" : "Care a fost capitala Imperiului Bizantin?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Roma",
+				"Atena",
+				"Constantinopol"
+			],
+			"rightAnswer": "Constantinopol"
+		},
+		{
+			"question" : "Care e țara de proveniență a vikingilor?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Danemarca",
+				"Irlanda",
+				"Suedia"
+			],
+			"rightAnswer": "Danemarca"
+		},
+		{
+			"question" : "Din ce este alcătuit diamantul?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"Oxigen, hidrogen și mangan",
+				"Carbon pur",
+				"Azot și siliciu"
+			],
+			"rightAnswer": "Carbon pur"
+		},
+		{
+			"question" : "Care este unitatea de măsură a presiunii?",
+			"difficult": "Easy",
+			"allAnswers": [
+				"Pascal",
+				"Ohm",
+				"Watt"
+			],
+			"rightAnswer": "Pascal"
+		},
+		{
+			"question" : "Care din următoarele elemente nu este o ramură a biologiei?",
+			"difficult": "Medium",
+			"allAnswers": [
+				"Zoologia",
+				"Virusologia",
+				"Biochimia"
+			],
+			"rightAnswer": "Biochimia"
+		},
+		{
+			"question" : "Din ce este compusă, în cea mai mare parte, atmosfera planetei Venus?",
+			"difficult": "Hard",
+			"allAnswers": [
+				"hidrogen",
+				"heliu",
+				"gaz carbonic"
+			],
+			"rightAnswer": "gaz carbonic"
+		}
+	]
+
+}
