@@ -31,7 +31,9 @@ public class Images
         StringBuilder str = new StringBuilder(link);
         str[0] = char.ToUpper(str[0]);
         link = str.ToString();
-        return link.Substring(0, link.Length-4);
+        var thing = link.Split('/');
+
+        return thing[thing.Length - 1].Substring(0, thing[thing.Length-1].Length-4);
     }
     public void setTexture(Texture2D texture)
     {
@@ -48,6 +50,7 @@ public class Manager : MonoBehaviour
     public Sprite[] icons;
 
     public static List<Images> images=new List<Images>();
+    public static List<string> names = new List<string>();
 
     public Vector2 firstInitialPos, secondInitialPos, thirdInitialPos, fourthInitialPos, fifthInitialPos, temp;
 
@@ -79,6 +82,7 @@ public class Manager : MonoBehaviour
     {
         Images();
         getInitialPositions();
+        //Debug.Log(firstPhoto.name + " " + secondPhoto.name + " " + thirdPhoto.name + " " + fourthPhoto.name + " " + fifthPhoto.name + " ");
         for (int i = 0; i < 5; i++)
         {
             int rnd = Random.Range(0, 5);
