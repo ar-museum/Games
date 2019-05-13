@@ -10,6 +10,8 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+
 public class Images
 {
     string link;
@@ -25,6 +27,10 @@ public class Images
     }
     public string getMyLink()
     {
+
+        StringBuilder str = new StringBuilder(link);
+        str[0] = char.ToUpper(str[0]);
+        link = str.ToString();
         return link.Substring(0, link.Length-4);
     }
     public void setTexture(Texture2D texture)
@@ -72,7 +78,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         Images();
-        getInitialPositions(); 
+        getInitialPositions();
         for (int i = 0; i < 5; i++)
         {
             int rnd = Random.Range(0, 5);
@@ -80,6 +86,7 @@ public class Manager : MonoBehaviour
             namePositionArray[rnd] = namePositionArray[i];
             namePositionArray[i] = temp;
         }
+        //namePositionArray.OrderBy(x => Random.value).ToArray();
         firstName.transform.position = firstInitialPos = namePositionArray[0];
         secondName.transform.position = secondInitialPos = namePositionArray[1];
         thirdName.transform.position = thirdInitialPos = namePositionArray[2];
@@ -113,36 +120,7 @@ public class Manager : MonoBehaviour
         fourthInitialPos = fourthName.transform.position;
         fifthInitialPos = fifthName.transform.position;
     }
-    public void set()
-    {
-
-
-        object[] loadedIcons = Resources.LoadAll("Textures", typeof(Sprite));
-        for (int x = 0; x < loadedIcons.Length; x++)
-        {
-            Debug.Log(loadedIcons[x].ToString());
-        }
-        firstName.GetComponent<Text>().text = loadedIcons[0].ToString();
-        secondName.GetComponent<Text>().text = loadedIcons[1].ToString();
-        thirdName.GetComponent<Text>().text = loadedIcons[2].ToString();
-        fourthName.GetComponent<Text>().text = loadedIcons[3].ToString();
-        fifthName.GetComponent<Text>().text = loadedIcons[4].ToString();
-
-        icons = new Sprite[loadedIcons.Length];
-        for (int x = 0; x < loadedIcons.Length; x++)
-        {
-            icons[x] = (Sprite)loadedIcons[x];
-
-        }
-        firstPhoto.sprite = icons[0];
-        secondPhoto.sprite = icons[1];
-        thirdPhoto.sprite = icons[2];
-        fourthPhoto.sprite = icons[3];
-        fifthPhoto.sprite = icons[4];
-
-        // Debug.Log(loadedIcons.Length);
-    }
-
+    
     public void getInitialPositions()
     {
         photoPositionArray = new[] { firstPhoto.transform.position,

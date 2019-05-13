@@ -51,7 +51,7 @@ namespace meniu
         }
         public void loadDragDrop()
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("DragLoading");
         }
         public void MuteSound()
         {

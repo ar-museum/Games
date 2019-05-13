@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 51d951106999a974db407dd6ed84da8e
   - enabled: 1
+    path: Assets/Scenes/DragLoading.unity
+    guid: d3fe0811b39d973418cc6bf0b6eb7e19
+  - enabled: 1
     path: Assets/Scenes/LaunchingTrivia.unity
     guid: 48a4390f47e116940960401fd5d86105
   m_configObjects: {}
