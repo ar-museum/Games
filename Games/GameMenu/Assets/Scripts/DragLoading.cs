@@ -27,17 +27,23 @@ public class DragLoading : MonoBehaviour
 
     public IEnumerator DownloadData(string url, string pathOnDisk)
     {
+        //Debug.Log(url);
+        // Debug.Log(pathOnDisk);
         var request = new UnityWebRequest(url, "GET");
         request.downloadHandler = new DownloadHandlerFile(pathOnDisk);
         request.certificateHandler = new CustomCertificateHandler();
 
         yield return request.SendWebRequest();
+        if (request.isNetworkError||request.isHttpError)
+        {
+            Debug.Log(request.error);
+        }
     }
 
     IEnumerator GetTexture()
     {
         text.GetComponentInChildren<TextMeshProUGUI>().text = "Loading";
-        string uri = "http://134.209.234.39/games/";
+        string uri = "https://armuseum.ml/uploads/photo/dragndrop/MuzeulMihaiEminescu";
         WebRequest request = WebRequest.Create(uri);
         WebResponse response = request.GetResponse();
         Regex regex = new Regex("<a href=\".*\">(?<name>.*.jpg)</a>");
@@ -59,7 +65,7 @@ public class DragLoading : MonoBehaviour
                 links.Add((match.Groups["name"]).ToString());
             }
         }
-
+       
         for (int x = 0; x < links.Count; x++)
         {
             if (x % 4 == 0)
@@ -67,23 +73,26 @@ public class DragLoading : MonoBehaviour
             else text.GetComponentInChildren<TextMeshProUGUI>().text = text.GetComponentInChildren<TextMeshProUGUI>().text + ".";
             Images image = new Images();
             image.setLink(links[x]);
+            Debug.Log(links[x]);
 
-            var str = Application.persistentDataPath + "/ceva.ccc";
+            var pathOnDisk = Application.persistentDataPath + "/Images/";
 
-            UnityWebRequest www = UnityWebRequestTexture.GetTexture(uri + links[x]);
-            yield return www.SendWebRequest();
-            if (www.isNetworkError || www.isHttpError)
-            {
-                Debug.Log(www.error);
-            }
+            if (!Directory.Exists(pathOnDisk))
+                Directory.CreateDirectory(pathOnDisk);
+            //Debug.Log("The directory was created successfully at:" + Directory.GetCreationTime(pathOnDisk));
 
-            else
-            {
-                Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                image.setTexture(myTexture);
-                Manager.images.Add(image);
+            var imagesPath = pathOnDisk + new FileInfo(uri+links[x]).Name;
 
-            }
+            yield return DownloadData(uri + links[x], imagesPath);
+
+            WWW www = new WWW(imagesPath);
+            while (!www.isDone)
+                yield return null;
+            Texture2D myTexture = www.texture;
+            //Debug.Log(myTexture.height);
+            image.setTexture(myTexture);
+            Manager.images.Add(image);
+
         }
         SceneManager.LoadScene("SampleScene");
     }
