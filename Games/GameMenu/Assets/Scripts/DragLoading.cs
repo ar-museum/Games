@@ -8,11 +8,31 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using Assets.Scripts.AR_TEAM.Http;
 
+namespace Assets.Scripts.AR_TEAM.Http
+{
+    public class CustomCertificateHandler : CertificateHandler
+    {
+        protected override bool ValidateCertificate(byte[] certificateData)
+        {
+            return true;
+        }
+    }
+}
 public class DragLoading : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI text;
+
+    public IEnumerator DownloadData(string url, string pathOnDisk)
+    {
+        var request = new UnityWebRequest(url, "GET");
+        request.downloadHandler = new DownloadHandlerFile(pathOnDisk);
+        request.certificateHandler = new CustomCertificateHandler();
+
+        yield return request.SendWebRequest();
+    }
 
     IEnumerator GetTexture()
     {
@@ -47,6 +67,8 @@ public class DragLoading : MonoBehaviour
             else text.GetComponentInChildren<TextMeshProUGUI>().text = text.GetComponentInChildren<TextMeshProUGUI>().text + ".";
             Images image = new Images();
             image.setLink(links[x]);
+
+            var str = Application.persistentDataPath + "/ceva.ccc";
 
             UnityWebRequest www = UnityWebRequestTexture.GetTexture(uri + links[x]);
             yield return www.SendWebRequest();
